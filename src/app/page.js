@@ -1,13 +1,18 @@
 import Image from 'next/image'
 import Link from 'next/link'
+
 import Navbar from './components/navbar'
 import FeatureOne from './components/features/featuresOne'
-
-import {RiArrowRightLine, FiFacebook, FiLinkedin, FiGithub, FiTwitter, FiCalendar, FiClock} from './assets/icons/vander'
+import DrTimeTable from './components/drTimeTable'
+import CtaOne from './components/cta/ctaOne'
+import Patients from './components/patients'
+import Footer from './components/footer'
+import ScrollTop from './components/scrollTop'
 import AboutImage from './components/aboutImage'
 
-import { medicalServices, doctorData } from './data/data'
-import DrTimeTable from './components/drTimeTable'
+import {RiArrowRightLine, FiFacebook, FiLinkedin, FiGithub, FiTwitter, FiCalendar, FiClock } from './assets/icons/vander'
+
+import { medicalServices, doctorData, blogData, partners } from './data/data'
 
 export default function Home() {
   return (
@@ -111,14 +116,14 @@ export default function Home() {
                               <div className="team-img position-relative">
                                   <Image src={item.image} width={0} height={0} sizes='100vh' style={{width:'100%', height:'auto'}} className="img-fluid" alt=""/>
                                   <ul className="list-unstyled team-social mb-0">
-                                      <li><Link to="#" className="btn btn-icon btn-pills btn-soft-primary"><FiFacebook className="icons"/></Link></li>
-                                      <li className="mt-2 ms-0"><Link to="#" className="btn btn-icon btn-pills btn-soft-primary"><FiLinkedin className="icons"/></Link></li>
-                                      <li className="mt-2 ms-0"><Link to="#" className="btn btn-icon btn-pills btn-soft-primary"><FiGithub className="icons"/></Link></li>
-                                      <li className="mt-2 ms-0"><Link to="#" className="btn btn-icon btn-pills btn-soft-primary"><FiTwitter className="icons"/></Link></li>
+                                      <li><Link href="#" className="btn btn-icon btn-pills btn-soft-primary"><FiFacebook className="icons"/></Link></li>
+                                      <li className="mt-2 ms-0"><Link href="#" className="btn btn-icon btn-pills btn-soft-primary"><FiLinkedin className="icons"/></Link></li>
+                                      <li className="mt-2 ms-0"><Link href="#" className="btn btn-icon btn-pills btn-soft-primary"><FiGithub className="icons"/></Link></li>
+                                      <li className="mt-2 ms-0"><Link href="#" className="btn btn-icon btn-pills btn-soft-primary"><FiTwitter className="icons"/></Link></li>
                                   </ul>
                               </div>
                               <div className="card-body content text-center">
-                                  <Link to="/doctor-team-one" className="title text-dark h5 d-block mb-0">{item.name}</Link>
+                                  <Link href="/doctor-team-one" className="title text-dark h5 d-block mb-0">{item.name}</Link>
                                   <small className="text-muted speciality">{item.speciality}</small>
                               </div>
                           </div>
@@ -127,12 +132,87 @@ export default function Home() {
               })}
 
               <div className="col-12 mt-4 pt-2 text-center">
-                  <Link to="/doctor-team-one" className="btn btn-primary">See More</Link>
+                  <Link href="/doctor-team-one" className="btn btn-primary">See More</Link>
               </div>
           </div>
       </div>
     </section>
 
+    <CtaOne/>
+
+    <section className="section">
+        <div className="container">
+            <div className="row justify-content-center">
+                <div className="col-12">
+                    <div className="section-title text-center mb-4 pb-2">
+                        <h4 className="title mb-4">Patients Says</h4>
+                        <p className="text-muted mx-auto para-desc mb-0">Great doctor if you need your family member to get effective immediate assistance, emergency treatment or a simple consultation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div className="row justify-content-center">
+                <div className="col-lg-8 mt-4 pt-2 text-center">
+                    <Patients/>
+                </div>
+            </div>
+        </div>
+
+        <div className="container mt-100 mt-60">
+            <div className="row justify-content-center">
+                <div className="col-12">
+                    <div className="section-title text-center mb-4 pb-2">
+                        <span className="badge rounded-pill bg-soft-primary mb-3">Read News</span>
+                        <h4 className="title mb-4">Latest News & Blogs</h4>
+                        <p className="text-muted mx-auto para-desc mb-0">Great doctor if you need your family member to get effective immediate assistance, emergency treatment or a simple consultation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div className="row">
+                {blogData.slice(0,3).map((item,index) => {
+                    return(
+                    <div className="col-lg-4 col-md-6 col-12 mt-4 pt-2" key={index}>
+                        <div className="card blog blog-primary border-0 shadow rounded overflow-hidden">
+                            <Image src={item.image} width={0} height={0} sizes='100vw' style={{width:'100%', height:'auto'}} className="img-fluid" alt=""/>
+                            <div className="card-body p-4">
+                                <ul className="list-unstyled mb-2 ">
+                                    <li className="list-inline-item text-muted small me-3 d-inline-flex align-items-center"><FiCalendar className="text-dark h6 me-1 mb-0"/>{item.date}</li>
+                                    <li className="list-inline-item text-muted small d-inline-flex align-items-center"><FiClock className="text-dark h6 me-1 mb-0 "/>{item.time}</li>
+                                </ul>
+                                <Link href={`/blog-detail/${item.id}`} className="text-dark title h5">{item.title}</Link>
+                                <div className="post-meta d-flex justify-content-between mt-3">
+                                    <ul className="list-unstyled mb-0">
+                                        <li className="list-inline-item me-2 mb-0"><Link href="#" className="text-muted like"><i className="mdi mdi-heart-outline me-1"></i>{item.like}</Link></li>
+                                        <li className="list-inline-item"><Link href="#" className="text-muted comments"><i className="mdi mdi-comment-outline me-1"></i>{item.comment}</Link></li>
+                                    </ul>
+                                    <Link href={`/blog-detail/${item.id}`} className="link">Read More <i className="mdi mdi-chevron-right align-middle"></i></Link>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    )
+                })}
+            </div>
+        </div>
+    </section>
+
+    <section className="py-4 bg-light">
+        <div className="container">
+            <div className="row justify-content-center">
+                {partners.map((item, index) => {
+                    return(
+                        <div className="col-lg-2 col-md-2 col-6 text-center py-4" key={index}>
+                            <Image src={item} width={125} height={25} className="avatar avatar-client" alt=""/>
+                        </div>
+                    )
+                })}
+            </div>
+        </div>
+    </section>
+
+    <Footer/>
+    <ScrollTop/>
    </>
   )
 }

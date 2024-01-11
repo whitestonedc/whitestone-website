@@ -302,7 +302,8 @@
 //Sticky Sidebar
 .sticky-bar {
     position: sticky !important;
-    top: 80px;
+    position: -webkit-sticky !important;
+    top: 80px !important;
 }
 
 //Text-color-white

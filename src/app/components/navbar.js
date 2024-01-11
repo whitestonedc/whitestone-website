@@ -199,7 +199,7 @@ export default function Navbar({navDark, manuClass,containerClass}){
                     <li className="list-inline-item mb-0 ms-1">
                         <div className="dropdown dropdown-primary">
                             <button type="button" className="btn btn-pills btn-soft-primary dropdown-toggle p-0" onClick={()=>setModal(!modal)}><Image src='/images/doctors/01.jpg' width={36} height={36} className="avatar avatar-ex-small rounded-circle" alt=""/></button>
-                            <div className={`${modal === true ? 'show' : ''} dropdown-menu dd-menu dropdown-menu-end shadow border-0 mt-3 py-3`} style={{minWidth:"200px"}}>
+                            <div className={`${modal === true ? 'show' : ''} dropdown-menu dd-menu dropdown-menu-end shadow border-0 mt-3 py-3`} style={{minWidth:"200px", right:'0'}}>
                                 <Link className="dropdown-item d-flex align-items-center text-dark" href="/doctor-profile">
                                     <Image src='/images/doctors/01.jpg' width={45} height={45} className="avatar avatar-md-sm rounded-circle border shadow" alt=""/>
                                     <div className="flex-1 ms-2">
