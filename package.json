@@ -1,6 +1,7 @@
 {
-  "name": "my-app",
-  "version": "0.1.0",
+  "name": "doctris",
+  "version": "1.0.0",
+  "description": "Doctris - Next Js Doctor Appointment Booking System",
   "private": true,
   "scripts": {
     "dev": "next dev",
