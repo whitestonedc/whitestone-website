@@ -155,7 +155,7 @@ export default function Navbar({navDark, manuClass,containerClass}){
                         </Offcanvas.Body>
                         <div className="offcanvas-footer p-4 border-top text-center">
                             <ul className="list-unstyled social-icon social mb-0">
-                                <li className="list-inline-item mb-0"><Link href="https://1.envato.market/doctris-react" target="_blank" className="rounded"><FiShoppingCart className="align-middle mb-0"/></Link></li>
+                                <li className="list-inline-item mb-0"><Link href="https://1.envato.market/doctris-next" target="_blank" className="rounded"><FiShoppingCart className="align-middle mb-0"/></Link></li>
                                 <li className="list-inline-item mb-0"><Link href="https://dribbble.com/shreethemes" target="_blank" className="rounded"><FiDribbble className="align-middle mb-0"/></Link></li>
                                 <li className="list-inline-item mb-0"><Link href="https://www.behance.net/shreethemes" target="_blank" className="rounded"><RiBehanceLine className="align-middle mb-0"/></Link></li>
                                 <li className="list-inline-item mb-0"><Link href="https://www.facebook.com/shreethemes" target="_blank" className="rounded"><FaFacebookF className="align-middle mb-0"/></Link></li>
@@ -276,7 +276,7 @@ export default function Navbar({navDark, manuClass,containerClass}){
                             </ul>
                         </li>
 
-                        <li className={`${["/aboutus", "/departments","/faqs", "/blogs","/blog-detail","/terms","/privacy","/error","/contact"].includes(manu)? "active" : ""} has-submenu parent-parent-menu-item`}><Link href="#">Pages</Link><span className="menu-arrow"></span>
+                        <li className={`${["/aboutus", "/departments","/faqs", "/blogs","/blog-detail","/terms","/privacy","/error"].includes(manu)? "active" : ""} has-submenu parent-parent-menu-item`}><Link href="#">Pages</Link><span className="menu-arrow"></span>
                             <ul className="submenu">
                                 <li className={manu === "/aboutus" ? "active" : ""}><Link href="/aboutus" className="sub-menu-item"> About Us</Link></li>
                                 <li className={manu === "/departments" ? "active" : ""}><Link href="/departments" className="sub-menu-item">Departments</Link></li>
@@ -291,9 +291,9 @@ export default function Navbar({navDark, manuClass,containerClass}){
                                 <li className={manu === "/terms" ? "active" : ""}><Link href="/terms" className="sub-menu-item">Terms & Policy</Link></li>
                                 <li className={manu === "/privacy" ? "active" : ""}><Link href="/privacy" className="sub-menu-item">Privacy Policy</Link></li>
                                 <li className={manu === "/error" ? "active" : ""}><Link href="/error" className="sub-menu-item">404 !</Link></li>
-                                <li className={manu === "/contact" ? "active" : ""}><Link href="/contact" className="sub-menu-item">Contact</Link></li>
                             </ul>
                         </li>
+                        <li className={manu === "/contact" ? "active" : ""}><Link href="/contact" className="sub-menu-item">Contact</Link></li>
                     </ul>
                 </div>
             </div>
