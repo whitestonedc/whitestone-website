@@ -66,16 +66,16 @@ export default function Navbar({ navDark, manuClass, containerClass }) {
                 <div>
                     {navDark === true ?
                         <Link className="logo" href="/">
-                            <Image src='/images/logo-dark.png' width={115} height={22} className="logo-light-mode" alt="" />
-                            <Image src='/images/logo-light.png' width={115} height={22} className="logo-dark-mode" alt="" />
+                            <Image src='/images/WS-Logo-Main.png' width={115} height={22} className="logo-light-mode" alt="" />
+                            <Image src='/images/WS-Logo-Main.png' width={115} height={22} className="logo-dark-mode" alt="" />
                         </Link> :
 
                         <Link className="logo" href="/">
                             <span className="logo-light-mode">
-                                <Image src='/images/logo-dark.png' className="l-dark" width={115} height={22} alt="" />
-                                <Image src='/images/logo-light.png' className="l-light" width={115} height={22} alt="" />
+                                <Image src='/images/WS-Logo-Main.png' className="l-dark" width={115} height={22} alt="" />
+                                <Image src='/images/WS-Logo-Main.png' className="l-light" width={115} height={22} alt="" />
                             </span>
-                            <Image src='/images/logo-light.png' width={115} height={22} className="logo-dark-mode" alt="" />
+                            <Image src='/images/WS-Logo-Main.png' width={115} height={22} className="logo-dark-mode" alt="" />
                         </Link>
                     }
                 </div>
@@ -101,8 +101,8 @@ export default function Navbar({ navDark, manuClass, containerClass }) {
                     <Offcanvas show={showTwo} onHide={handleCloseTwo} placement="end">
                         <Offcanvas.Header closeButton className="offcanvas-header p-4 border-bottom">
                             <h5 id="offcanvasRightLabel" className="mb-0">
-                                <Image src='/images/logo-dark.png' width={115} height={22} className="light-version" alt="" />
-                                <Image src='/images/logo-light.png' width={115} height={22} className="dark-version" alt="" />
+                                <Image src='/images/WS-Logo-Main.png' width={115} height={22} className="light-version" alt="" />
+                                <Image src='/images/WS-Logo-Main.png' width={115} height={22} className="dark-version" alt="" />
                             </h5>
                         </Offcanvas.Header>
                         <Offcanvas.Body>
