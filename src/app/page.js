@@ -87,8 +87,8 @@ export default function IndexThree() {
                             <div className="section-title ms-lg-5">
                                 <span className="badge rounded-pill bg-soft-primary">About WhiteStone</span>
                                 <h4 className="title mt-3 mb-4">Good Services And Better <br /> Health By Our Specialists</h4>
-                                <p className="para-desc text-muted">Great doctor if you need your family member to get effective immediate assistance, emergency treatment or a simple consultation.</p>
-                                <p className="para-desc text-muted">The most well-known dummy text is the Lorem Ipsum, which is said to have originated in the 16th century. Lorem Ipsum is composed in a pseudo-Latin language which more or less corresponds to proper Latin. It contains a series of real Latin words.</p>
+                                <p className="para-desc text-muted">Welcome to Whitestone Dental Clinic, where excellence in dentistry meets compassionate care. As your premier choice for dental health, we offer a comprehensive range of services tailored to meet your needs.</p>
+                                <p className="para-desc text-muted">From treating caries and gum diseases to tooth whitening, implants, and occlusion correction, our team of experienced dentists is dedicated to providing painless and meticulous care. Whether you require routine maintenance or complex procedures, trust us to deliver exceptional results with precision and professionalism. Your smile is our priority, and we're here to help you achieve optimal oral health and confidence. Schedule your appointment today and experience the difference at Whitestone Dental Clinic.</p>
                                 <div className="mt-4">
                                     <Link href="/aboutus" className="btn btn-soft-primary">Read More</Link>
                                 </div>
@@ -101,7 +101,7 @@ export default function IndexThree() {
                     <div className="row justify-content-center">
                         <div className="col-12">
                             <div className="section-title mb-4 pb-2 text-center">
-                                <span className="badge rounded-pill bg-soft-primary mb-3">Departments</span>
+                                <span className="badge rounded-pill bg-soft-primary mb-3">Services</span>
                                 <h4 className="title mb-4">Our Medical Services</h4>
                                 <p className="text-muted mx-auto para-desc mb-0">Great doctor if you need your family member to get effective immediate assistance, emergency treatment or a simple consultation.</p>
                             </div>
@@ -118,9 +118,9 @@ export default function IndexThree() {
                                             <Icon className="h3 mb-0" />
                                         </div>
                                         <div className="card-body p-0 mt-3">
-                                            <Link href="/departments" className="title text-dark h5">{item.title}</Link>
+                                            <Link href="/services" className="title text-dark h5">{item.title}</Link>
                                             <p className="text-muted mt-3">{item.desc}</p>
-                                            <Link href="/departments" className="link">Read More <RiArrowRightLine className="align-middle" /></Link>
+                                            <Link href="/services" className="link">Read More <RiArrowRightLine className="align-middle" /></Link>
                                         </div>
                                     </div>
                                 </div>
@@ -197,7 +197,7 @@ export default function IndexThree() {
                                 <div className="section-title mb-4 pb-2">
                                     <MdOutlineEventNote className="text-primary h2" />
                                     <h4 className="title mb-4">Book Your Appointment</h4>
-                                    <p className="text-muted para-desc mb-0">Great doctor if you need your family member to get effective immediate assistance, emergency treatment or a simple consultation.</p>
+                                    <p className="text-muted para-desc mb-0">Schedule your visit today for exceptional dental care and a brighter, healthier smile tomorrow.</p>
                                 </div>
                                 {contactData.map((item, index) => {
                                     let Icon = item.icon

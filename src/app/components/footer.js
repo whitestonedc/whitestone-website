@@ -15,7 +15,7 @@ export default function Footer() {
                             <Link href="#" className="logo-footer">
                                 <Image src='/images/WS-Logo-White.png' width={150} height={40} alt="" />
                             </Link>
-                            <p className="mt-4 me-xl-5">Great doctor if you need your family member to get effective immediate assistance, emergency treatment or a simple consultation.</p>
+                            <p className="mt-4 me-xl-5">At Whitestone Dental Clinic, we're not just about smiles; we're about crafting confidence, one smile at a time. Join us on a journey to dental excellence and discover the difference today!</p>
                         </div>
 
                         <div className="col-xl-7 col-lg-8 col-md-12">

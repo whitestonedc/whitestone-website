@@ -323,17 +323,17 @@ export const ctaData = [
     {
         icon: RiBriefcase4Line,
         title: 'Our Mission',
-        desc: 'The most well-known dummy text is the Lorem Ipsum, which is said to have originated in the 16th century.'
+        desc: 'We are committed to providing personalized, compassionate dental care, utilizing advanced technology to achieve optimal oral health outcomes.'
     },
     {
         icon: FiAirplay,
         title: 'Our Vision',
-        desc: 'The most well-known dummy text is the Lorem Ipsum, which is said to have originated in the 16th century.'
+        desc: 'To be the trusted leader in dental excellence, enriching lives by fostering healthy, confident smiles for our community.'
     },
     {
         icon: MdOutlineFlip,
         title: 'Who We Are ?',
-        desc: 'The most well-known dummy text is the Lorem Ipsum, which is said to have originated in the 16th century.'
+        desc: 'At Whitestone Dental Clinic, we are a team of dedicated professionals passionate about transforming smiles and enhancing overall well-being.'
     },
 ]
 
@@ -363,17 +363,17 @@ export const contactData = [
     {
         icon: RiStethoscopeFill,
         title: 'Success Of Treatment',
-        desc: 'The most well-known dummy text is the Lorem Ipsum, which is said to have originated in the 16th century.'
+        desc: 'Explore our patients\' successful treatment journeys and see the transformative results firsthand.'
     },
     {
         icon: RiMicroscopeLine,
         title: 'Modern Technology',
-        desc: 'The most well-known dummy text is the Lorem Ipsum, which is said to have originated in the 16th century.'
+        desc: 'Experience the benefits of state-of-the-art dental technology for precise diagnoses and effective treatments.'
     },
     {
         icon: GrUserPolice,
         title: 'Certified Doctors',
-        desc: 'The most well-known dummy text is the Lorem Ipsum, which is said to have originated in the 16th century.'
+        desc: 'Trust in our team of certified dental professionals for personalized and exceptional care you can rely on.'
     },
 ]
 export const latestAppointment = [
