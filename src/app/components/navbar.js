@@ -167,12 +167,12 @@ export default function Navbar({ navDark, manuClass, containerClass }) {
                         </div>
                     </Offcanvas>
 
-                    <li className="list-inline-item mb-0 ms-1">
+                    {/* <li className="list-inline-item mb-0 ms-1">
                         <Link href="#" className="btn btn-icon btn-pills btn-primary" onClick={handleShow} >
                             <FiSearch />
                         </Link>
-                    </li>
-                    <Offcanvas show={show} onHide={handleClose} placement="top" style={{ height: '250px' }}>
+                    </li> */}
+                    {/* <Offcanvas show={show} onHide={handleClose} placement="top" style={{ height: '250px' }}>
                         <Offcanvas.Header closeButton>
                         </Offcanvas.Header>
                         <Offcanvas.Body className="pb-3">
@@ -194,7 +194,7 @@ export default function Navbar({ navDark, manuClass, containerClass }) {
                                 </div>
                             </div>
                         </Offcanvas.Body>
-                    </Offcanvas>
+                    </Offcanvas> */}
 
                     <li className="list-inline-item mb-0 ms-1">
                         <div className="dropdown dropdown-primary">

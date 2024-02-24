@@ -26,7 +26,7 @@ export default function IndexThree() {
                                 <h4 className="heading fw-bold text-white title-dark mt-3 mb-4">Booking Your Appointments</h4>
                                 <p className="para-desc mx-auto text-white-50 mb-0">Great doctor if you need your family member to get effective immediate assistance, emergency treatment or a simple consultation.</p>
 
-                                <div className="mt-4 pt-2">
+                                <div className="mt-4 pt-2 col-md-10 offset-md-1"> {/* //Added "col-md-8 offset-md-2" to reduce the width of the form */}
                                     <form className="rounded text-start shadow p-4 bg-white-50">
                                         <div className="row align-items-center">
                                             {/* <div className="col-md">
