@@ -22,30 +22,30 @@ export default function IndexThree() {
                     <div className="row justify-content-center mt-5">
                         <div className="col-xl-10">
                             <div className="heading-title text-center">
-                                <Image src='/images/logo-icon.png' width={54} height={50} alt="" />
+                                <Image src='/images/WS-Logo-Main.png' width={194} height={50} alt="" />
                                 <h4 className="heading fw-bold text-white title-dark mt-3 mb-4">Booking Your Appointments</h4>
                                 <p className="para-desc mx-auto text-white-50 mb-0">Great doctor if you need your family member to get effective immediate assistance, emergency treatment or a simple consultation.</p>
 
                                 <div className="mt-4 pt-2">
                                     <form className="rounded text-start shadow p-4 bg-white-50">
                                         <div className="row align-items-center">
-                                            <div className="col-md">
+                                            {/* <div className="col-md">
                                                 <div className="input-group bg-white border rounded" style={{ opacity: '0.7' }}>
                                                     <span className="input-group-text border-0"><RiMapPin2Line className="text-primary h5 fw-normal mb-0" /></span>
-                                                    <input name="name" id="location" type="text" className="form-control border-0" placeholder="Location:" />
+                                                    <input name="name" id="location" type="text" className="form-control border-0" placeholder="Your Name:" />
                                                 </div>
-                                            </div>
+                                            </div> */}
 
                                             <div className="col-md mt-4 mt-sm-0">
                                                 <div className="input-group bg-white border rounded" style={{ opacity: '0.7' }}>
                                                     <span className="input-group-text border-0"><RiUser2Line className="text-primary h5 fw-normal mb-0" /></span>
-                                                    <input name="name" id="name" type="text" className="form-control border-0" placeholder="Doctor Name:" />
+                                                    <input name="name" id="name" type="text" className="form-control border-0" placeholder="Your Name:" />
                                                 </div>
                                             </div>
 
                                             <div className="col-md-auto mt-4 mt-sm-0">
                                                 <div className="d-grid d-md-block">
-                                                    <button type="submit" className="btn btn-primary">Search</button>
+                                                    <button type="submit" className="btn btn-primary">Book</button>
                                                 </div>
                                             </div>
                                         </div>
