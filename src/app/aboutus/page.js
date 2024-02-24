@@ -22,7 +22,7 @@ export default function AboutUs() {
                         <div className="col-12">
                             <div className="section-title text-center">
                                 <h3 className="sub-title mb-4 text-white title-dark">About us</h3>
-                                <p className="para-desc mx-auto text-white-50">Great doctor if you need your family member to get effective immediate assistance, emergency treatment or a simple consultation.</p>
+                                <p className="para-desc mx-auto text-white-50">Welcome to Whitestone Dental Clinic, where excellence in dentistry meets compassionate care. As your premier choice for dental health, we offer a comprehensive range of services tailored to meet your needs. </p>
 
                                 <nav aria-label="breadcrumb" className="d-inline-block mt-3">
                                     <ul className="breadcrumb bg-light rounded mb-0 py-1 px-2">
@@ -53,8 +53,8 @@ export default function AboutUs() {
                                 <div className="section-title me-lg-5">
                                     <span className="badge rounded-pill bg-soft-primary">About WhiteStone</span>
                                     <h4 className="title mt-3 mb-4">Good Services And Better <br /> Health By Our Specialists</h4>
-                                    <p className="para-desc text-muted">Great doctor if you need your family member to get effective immediate assistance, emergency treatment or a simple consultation.</p>
-                                    <p className="para-desc text-muted">The most well-known dummy text is the Lorem Ipsum, which is said to have originated in the 16th century. Lorem Ipsum is composed in a pseudo-Latin language which more or less corresponds to proper Latin. It contains a series of real Latin words.</p>
+                                    <p className="para-desc text-muted">Welcome to Whitestone Dental Clinic, where excellence in dentistry meets compassionate care. As your premier choice for dental health, we offer a comprehensive range of services tailored to meet your needs. </p>
+                                    <p className="para-desc text-muted">From treating caries and gum diseases to tooth whitening, implants, and occlusion correction, our team of experienced dentists is dedicated to providing painless and meticulous care. Whether you require routine maintenance or complex procedures, trust us to deliver exceptional results with precision and professionalism. Your smile is our priority, and we're here to help you achieve optimal oral health and confidence. Schedule your appointment today and experience the difference at Whitestone Dental Clinic.</p>
                                     <div className="mt-4">
                                         <Link href="" className="btn btn-soft-primary">Read More</Link>
                                     </div>
