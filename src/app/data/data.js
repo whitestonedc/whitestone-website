@@ -1324,23 +1324,23 @@ export const faqAbout = [
 export const acccordianData = [
     {
         id: 1,
-        title: 'How does it work ?',
-        desc: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.'
+        title: 'Choose a Category to Quickly Find:',
+        desc: 'Discover Your Perfect Fit! Explore Categories to Find Exactly What You Need in Just a Few Clicks.'
     },
     {
         id: 2,
-        title: 'Do I need a designer to use Doctris ?',
-        desc: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.'
+        title: 'Get Started',
+        desc: 'Ready, Set, Go! Begin Your Journey Today and Unlock Endless Possibilities with Just a Click of a Button.'
     },
     {
         id: 3,
-        title: 'What do I need to do to start selling ?',
-        desc: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.'
+        title: 'Pricing Plan',
+        desc: 'Unlock Your Options: Explore Our Flexible Pricing Plans Tailored to Suit Your Needs and Budget Perfectly.'
     },
     {
         id: 4,
-        title: 'What happens when I receive an order ?',
-        desc: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.'
+        title: 'Dental Questions',
+        desc: 'Answers at Your Fingertips: Get Expert Solutions to Your Dental Queries and Enjoy Peace of Mind Today.'
     },
 ]
 export const commentData = [

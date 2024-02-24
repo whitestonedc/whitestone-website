@@ -77,7 +77,7 @@ export default function Faqs() {
                         <div className="col-12">
                             <div className="section-title text-center mb-4 pb-2">
                                 <h4 className="mb-4">General Questions</h4>
-                                <p className="para-desc mx-auto text-muted mb-0">Great doctor if you need your family member to get effective immediate assistance, emergency treatment or a simple consultation.</p>
+                                <p className="para-desc mx-auto text-muted mb-0">Answers at Your Fingertips: Find Quick Solutions to Your General Queries and Get Back to What Matters Most!</p>
                             </div>
                         </div>
                     </div>
@@ -94,7 +94,7 @@ export default function Faqs() {
                         <div className="col-12">
                             <div className="section-title text-center mb-4 pb-2">
                                 <h4 className="mb-4">Still have a questions ?</h4>
-                                <p className="para-desc mx-auto text-muted mb-0">Great doctor if you need your family member to get effective immediate assistance, emergency treatment or a simple consultation.</p>
+                                <p className="para-desc mx-auto text-muted mb-0">Dive deeper into the details. Our dedicated team is here to address any lingering inquiries and guide you to success.</p>
                             </div>
                         </div>
                     </div>
