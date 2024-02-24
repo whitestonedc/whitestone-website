@@ -66,16 +66,16 @@ export default function Navbar({navDark, manuClass,containerClass}){
                 <div>
                     {navDark === true ? 
                     <Link className="logo" href="/">
-                        <Image src='/images/logo-dark.png' width={115} height={22} className="logo-light-mode" alt=""/>
-                        <Image src='/images/logo-light.png' width={115} height={22} className="logo-dark-mode" alt=""/>
+                        <Image src='/images/logo-dark.png' width={115} height={40} className="logo-light-mode" alt=""/>
+                        <Image src='/images/logo-light.png' width={115} height={40} className="logo-dark-mode" alt=""/>
                     </Link> :
 
                     <Link className="logo" href="/">
                         <span className="logo-light-mode">
-                            <Image src='/images/logo-dark.png' className="l-dark" width={115} height={22} alt=""/>
-                            <Image src='/images/logo-light.png' className="l-light" width={115} height={22} alt=""/>
+                            <Image src='/images/logo-dark.png' className="l-dark" width={115} height={40} alt=""/>
+                            <Image src='/images/logo-light.png' className="l-light" width={115} height={40} alt=""/>
                         </span>
-                        <Image src='/images/logo-light.png' width={115} height={22} className="logo-dark-mode" alt=""/>
+                        <Image src='/images/logo-light.png' width={115} height={40} className="logo-dark-mode" alt=""/>
                     </Link>
                     }
                 </div>
