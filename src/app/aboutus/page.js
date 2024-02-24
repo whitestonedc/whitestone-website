@@ -96,7 +96,7 @@ export default function AboutUs() {
                 </div>
             </div> */}
 
-                <div className="container mt-100 mt-60">
+                {/* <div className="container mt-100 mt-60">
                     <div className="row justify-content-center">
                         <div className="col-12">
                             <div className="section-title text-center mb-4 pb-2">
@@ -133,7 +133,7 @@ export default function AboutUs() {
                             <Link href="/doctor-team-one" className="btn btn-primary">See More</Link>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </section>
             <Footer />
             <ScrollTop />
