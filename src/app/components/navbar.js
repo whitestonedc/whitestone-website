@@ -222,7 +222,13 @@ export default function Navbar({ navDark, manuClass, containerClass }) {
                             <Link href="/" className="sub-menu-item" >Home</Link>
                         </li>
 
-                        <li className={`${["/doctor-dashboard", "/doctor-appointment", "/patient-list", "/doctor-schedule", "/invoices", "/patient-review", "/doctor-messages", "/doctor-profile", "/doctor-profile-setting", "/doctor-chat", "/login", "/signup", "/forgot-password", "/doctor-team-one", "/doctor-team-two", "/doctor-team-three"].includes(manu) ? "active" : ""} has-submenu parent-parent-menu-item`}>
+                        <li className={manu === "/services" ? "active" : ""}>
+                            <Link href="/services" className="sub-menu-item" >Services</Link>
+                        </li>
+                        <li className={manu === "/faqs" ? "active" : ""}><Link href="/faqs" className="sub-menu-item">FAQs</Link></li>
+                        <li className={manu === "/aboutus" ? "active" : ""}><Link href="/aboutus" className="sub-menu-item"> About Us</Link></li>
+
+                        {/* <li className={`${["/doctor-dashboard", "/doctor-appointment", "/patient-list", "/doctor-schedule", "/invoices", "/patient-review", "/doctor-messages", "/doctor-profile", "/doctor-profile-setting", "/doctor-chat", "/login", "/signup", "/forgot-password", "/doctor-team-one", "/doctor-team-two", "/doctor-team-three"].includes(manu) ? "active" : ""} has-submenu parent-parent-menu-item`}>
                             <Link href="#">Doctors</Link><span className="menu-arrow"></span>
                             <ul className="submenu">
                                 <li className={`${["/doctor-dashboard", "/doctor-appointment", "/patient-list", "/doctor-schedule", "/invoices", "/patient-review", "/doctor-messages", "/doctor-profile", "/doctor-profile-setting", "/doctor-chat", "/login", "/signup", "/forgot-password"].includes(manu) ? "active" : ""} has-submenu parent-menu-item`}>
@@ -247,9 +253,9 @@ export default function Navbar({ navDark, manuClass, containerClass }) {
                                 <li className={manu === "/doctor-team-two" ? "active" : ""}><Link href="/doctor-team-two" className="sub-menu-item">Doctors Two</Link></li>
                                 <li className={manu === "/doctor-team-three" ? "active" : ""}><Link href="/doctor-team-three" className="sub-menu-item">Doctors Three</Link></li>
                             </ul>
-                        </li>
+                        </li> */}
 
-                        <li className={`${["/patient-dashboard", "/patient-profile", "/booking-appointment", "/patient-invoice"].includes(manu) ? "active" : ""} has-submenu parent-menu-item`}>
+                        {/* <li className={`${["/patient-dashboard", "/patient-profile", "/booking-appointment", "/patient-invoice"].includes(manu) ? "active" : ""} has-submenu parent-menu-item`}>
                             <Link href="#">Patients</Link><span className="menu-arrow"></span>
                             <ul className="submenu">
                                 <li className={manu === "/patient-dashboard" ? "active" : ""}><Link href="/patient-dashboard" className="sub-menu-item">Dashboard</Link></li>
@@ -257,9 +263,9 @@ export default function Navbar({ navDark, manuClass, containerClass }) {
                                 <li className={manu === "/booking-appointment" ? "active" : ""}><Link href="/booking-appointment" className="sub-menu-item">Book Appointment</Link></li>
                                 <li className={manu === "/patient-invoice" ? "active" : ""}><Link href="/patient-invoice" className="sub-menu-item">Invoice</Link></li>
                             </ul>
-                        </li>
+                        </li> */}
 
-                        <li className={`${["/pharmacy", "/pharmacy-shop", "/pharmacy-product-detail", "/pharmacy-shop-cart", "/pharmacy-checkout", "/pharmacy-account"].includes(manu) ? "active" : ""} has-submenu parent-menu-item`}>
+                        {/* <li className={`${["/pharmacy", "/pharmacy-shop", "/pharmacy-product-detail", "/pharmacy-shop-cart", "/pharmacy-checkout", "/pharmacy-account"].includes(manu) ? "active" : ""} has-submenu parent-menu-item`}>
                             <Link href="#">Pharmacy</Link><span className="menu-arrow"></span>
                             <ul className="submenu">
                                 <li className={manu === "/pharmacy" ? "active" : ""}><Link href="/pharmacy" className="sub-menu-item">Pharmacy</Link></li>
@@ -269,12 +275,12 @@ export default function Navbar({ navDark, manuClass, containerClass }) {
                                 <li className={manu === "/pharmacy-checkout" ? "active" : ""}><Link href="/pharmacy-checkout" className="sub-menu-item">Checkout</Link></li>
                                 <li className={manu === "/pharmacy-account" ? "active" : ""}><Link href="/pharmacy-account" className="sub-menu-item">Account</Link></li>
                             </ul>
-                        </li>
+                        </li> */}
 
-                        <li className={`${["/aboutus", "/departments", "/faqs", "/blogs", "/blog-detail", "/terms", "/privacy", "/error"].includes(manu) ? "active" : ""} has-submenu parent-parent-menu-item`}><Link href="#">Pages</Link><span className="menu-arrow"></span>
+                        {/* <li className={`${["/aboutus", "/departments", "/faqs", "/blogs", "/blog-detail", "/terms", "/privacy", "/error"].includes(manu) ? "active" : ""} has-submenu parent-parent-menu-item`}><Link href="#">Pages</Link><span className="menu-arrow"></span>
                             <ul className="submenu">
                                 <li className={manu === "/aboutus" ? "active" : ""}><Link href="/aboutus" className="sub-menu-item"> About Us</Link></li>
-                                <li className={manu === "/departments" ? "active" : ""}><Link href="/departments" className="sub-menu-item">Departments</Link></li>
+                                <li className={manu === "/departments" ? "active" : ""}><Link href="/departments" className="sub-menu-item">Services</Link></li>
                                 <li className={manu === "/faqs" ? "active" : ""}><Link href="/faqs" className="sub-menu-item">FAQs</Link></li>
                                 <li className={`${["/blogs", "/blog-detail"].includes(manu) ? "active" : ""} has-submenu parent-menu-item`}>
                                     <Link href="#" className="menu-item"> Blogs </Link><span className="submenu-arrow"></span>
@@ -283,11 +289,11 @@ export default function Navbar({ navDark, manuClass, containerClass }) {
                                         <li className={manu === "/blog-detail" ? "active" : ""}><Link href="/blog-detail" className="sub-menu-item">Blog Details</Link></li>
                                     </ul>
                                 </li>
-                                <li className={manu === "/terms" ? "active" : ""}><Link href="/terms" className="sub-menu-item">Terms & Policy</Link></li>
+                                <li className={manu === "/terms" ? "active" : ""}><Link href="/terms" className="sub-menu-item">Terms & Conditions</Link></li>
                                 <li className={manu === "/privacy" ? "active" : ""}><Link href="/privacy" className="sub-menu-item">Privacy Policy</Link></li>
                                 <li className={manu === "/error" ? "active" : ""}><Link href="/error" className="sub-menu-item">404 !</Link></li>
                             </ul>
-                        </li>
+                        </li> */}
                         <li className={manu === "/contact" ? "active" : ""}><Link href="/contact" className="sub-menu-item">Contact</Link></li>
                     </ul>
                 </div>
