@@ -155,7 +155,7 @@ export default function IndexThree() {
             </section>
 
             <section className="section">
-                <div className="container">
+                {/* <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-12">
                             <div className="section-title text-center mb-4 pb-2">
@@ -188,9 +188,9 @@ export default function IndexThree() {
                             )
                         })}
                     </div>
-                </div>
+                </div> */}
 
-                <div className="container mt-100 mt-60">
+                <div className="container mt-50 mt-60"> {/* changed margin top from 100 to 50 */}
                     <div className="row align-items-lg-end">
                         <div className="col-md-6">
                             <div className="me-xl-3">
