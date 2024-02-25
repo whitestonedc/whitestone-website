@@ -93,7 +93,7 @@ export default function Navbar({ navDark, manuClass, containerClass }) {
                 </div>
 
                 <ul className="dropdowns list-inline mb-0">
-                    <li className="list-inline-item mb-0">
+                    {/* <li className="list-inline-item mb-0">
                         <Link href="#" onClick={handleShowTwo}>
                             <div className="btn btn-icon btn-pills btn-primary"><FiSettings className="fea icon-sm" /></div>
                         </Link>
@@ -165,7 +165,7 @@ export default function Navbar({ navDark, manuClass, containerClass }) {
                                 <li className="list-inline-item mb-0"><Link href="https://shreethemes.in" target="_blank" className="rounded"><LuGlobe className="align-middle mb-0" /></Link></li>
                             </ul>
                         </div>
-                    </Offcanvas>
+                    </Offcanvas> */}
 
                     {/* <li className="list-inline-item mb-0 ms-1">
                         <Link href="#" className="btn btn-icon btn-pills btn-primary" onClick={handleShow} >
@@ -196,7 +196,7 @@ export default function Navbar({ navDark, manuClass, containerClass }) {
                         </Offcanvas.Body>
                     </Offcanvas> */}
 
-                    <li className="list-inline-item mb-0 ms-1">
+                    {/* <li className="list-inline-item mb-0 ms-1">
                         <div className="dropdown dropdown-primary">
                             <button type="button" className="btn btn-pills btn-soft-primary dropdown-toggle p-0" onClick={() => setModal(!modal)}><Image src='/images/doctors/01.jpg' width={36} height={36} className="avatar avatar-ex-small rounded-circle" alt="" /></button>
                             <div className={`${modal === true ? 'show' : ''} dropdown-menu dd-menu dropdown-menu-end shadow border-0 mt-3 py-3`} style={{ minWidth: "200px", right: '0' }}>
@@ -213,7 +213,7 @@ export default function Navbar({ navDark, manuClass, containerClass }) {
                                 <Link className="dropdown-item text-dark" href="/login"><span className="mb-0 d-inline-block me-1"><LiaSignOutAltSolid className="align-middle h6 mb-0" /></span> Logout</Link>
                             </div>
                         </div>
-                    </li>
+                    </li> */}
                 </ul>
 
                 <div id="navigation" style={{ display: isMenu ? 'block' : 'none' }}>
