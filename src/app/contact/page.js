@@ -19,7 +19,7 @@ export default function Contact() {
                         <div className="col-12">
                             <div className="section-title text-center">
                                 <h3 className="sub-title mb-4 text-white title-dark">Contact Us</h3>
-                                <p className="para-desc mx-auto text-white-50">Connect with Us: Reach Out for Support, Inquiries, or Just to Say Hello. We'd Love to Hear from You!</p>
+                                <p className="para-desc mx-auto text-white-50">Connect with Us: Reach Out for Support, Inquiries, or Just to Say Hello. We&apos;d Love to Hear from You!</p>
 
                                 <nav aria-label="breadcrumb" className="d-inline-block mt-3">
                                     <ul className="breadcrumb bg-light rounded mb-0 py-1 px-2">
