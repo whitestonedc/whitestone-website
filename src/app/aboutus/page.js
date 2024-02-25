@@ -56,7 +56,7 @@ export default function AboutUs() {
                                     <p className="para-desc text-muted">Welcome to Whitestone Dental Clinic, where excellence in dentistry meets compassionate care. As your premier choice for dental health, we offer a comprehensive range of services tailored to meet your needs. </p>
                                     <p className="para-desc text-muted">From treating caries and gum diseases to tooth whitening, implants, and occlusion correction, our team of experienced dentists is dedicated to providing painless and meticulous care. Whether you require routine maintenance or complex procedures, trust us to deliver exceptional results with precision and professionalism. Your smile is our priority, and we&apos;re here to help you achieve optimal oral health and confidence. Schedule your appointment today and experience the difference at Whitestone Dental Clinic.</p>
                                     <div className="mt-4">
-                                        <Link href="" className="btn btn-soft-primary">Read More</Link>
+                                        {/* <Link href="" className="btn btn-soft-primary">Read More</Link> */}
                                     </div>
                                 </div>
                             </div>
