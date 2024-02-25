@@ -4,7 +4,7 @@ import { RiEyeFill, RiPsychotherapyFill, RiStethoscopeFill, RiCapsuleFill, RiMic
 export const medicalServices = [
     {
         icon: RiEyeFill,
-        title: 'General Denta',
+        title: 'General Dental',
         desc: 'From routine cleanings to oral exams, our comprehensive general dental services focus on preventive care to maintain optimal oral health for you and your family.'
     },
     {
