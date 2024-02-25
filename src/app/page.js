@@ -103,7 +103,7 @@ export default function IndexThree() {
                             <div className="section-title mb-4 pb-2 text-center">
                                 <span className="badge rounded-pill bg-soft-primary mb-3">Services</span>
                                 <h4 className="title mb-4">Our Medical Services</h4>
-                                <p className="text-muted mx-auto para-desc mb-0">Great doctor if you need your family member to get effective immediate assistance, emergency treatment or a simple consultation.</p>
+                                <p className="text-muted mx-auto para-desc mb-0">Great doctors if you need your family member to get effective immediate assistance, emergency treatment or a simple consultation.</p>
                             </div>
                         </div>
                     </div>
@@ -120,7 +120,7 @@ export default function IndexThree() {
                                         <div className="card-body p-0 mt-3">
                                             <Link href="/services" className="title text-dark h5">{item.title}</Link>
                                             <p className="text-muted mt-3">{item.desc}</p>
-                                            <Link href="/services" className="link">Read More <RiArrowRightLine className="align-middle" /></Link>
+                                            {/* <Link href="/services" className="link">Read More <RiArrowRightLine className="align-middle" /></Link> */}
                                         </div>
                                     </div>
                                 </div>
@@ -136,8 +136,8 @@ export default function IndexThree() {
                 </div>
             </section>
 
-            <section className="pt-md-0 cta-section">
-                <div className="container">
+            <section className="pt-md-0 cta-section mt-4">
+                {/* <div className="container">
                     <div className="row">
                         <div className="col-lg-8 col-md-6">
                             <div className="row mt-4">
@@ -151,7 +151,7 @@ export default function IndexThree() {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </section>
 
             <section className="section">

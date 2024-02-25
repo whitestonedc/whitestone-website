@@ -19,7 +19,7 @@ export default function Departments() {
                         <div className="col-12">
                             <div className="section-title text-center">
                                 <h3 className="sub-title mb-4 text-white title-dark">Services</h3>
-                                <p className="para-desc mx-auto text-white-50">Great doctor if you need your family member to get effective immediate assistance, emergency treatment or a simple consultation.</p>
+                                <p className="para-desc mx-auto text-white-50">Great doctors if you need your family member to get effective immediate assistance, emergency treatment or a simple consultation.</p>
 
                                 <nav aria-label="breadcrumb" className="d-inline-block mt-3">
                                     <ul className="breadcrumb bg-light rounded mb-0 py-1 px-2">
@@ -53,7 +53,7 @@ export default function Departments() {
                                         <div className="card-body p-0 mt-3">
                                             <Link href="#" className="title text-dark h5">{item.title}</Link>
                                             <p className="text-muted mt-3">{item.desc}</p>
-                                            <Link href="#" className="link">Read More <FiArrowRight className="align-middle" /></Link>
+                                            {/* <Link href="#" className="link">Read More <FiArrowRight className="align-middle" /></Link> */}
                                         </div>
                                     </div>
                                 </div>

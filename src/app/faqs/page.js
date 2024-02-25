@@ -27,7 +27,7 @@ export default function Faqs() {
                                     <input type="text" id="name" name="name" className="border bg-white-50 rounded-pill" required="" placeholder="Ask a questions..." />
                                     <button type="submit" className="btn btn-pills btn-primary"><RiSearchLine className="mb-0 align-middle me-1" /> Search</button>
                                 </form>
-                                <p className="text-white-50 mb-0 para-desc mx-auto mt-3">*We collect your searching keywords to improve our FAQ</p>
+                                <p className="text-white-50 mb-0 para-desc mx-auto mt-3">*We collect your search keywords to improve our FAQ</p>
                             </div>
                         </div>
                     </div>

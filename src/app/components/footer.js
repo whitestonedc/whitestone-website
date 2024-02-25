@@ -20,19 +20,19 @@ export default function Footer() {
 
                         <div className="col-xl-7 col-lg-8 col-md-12">
                             <div className="row">
-                                <div className="col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                                <div className="col-md-6 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
                                     <h5 className="footer-head">Company</h5>
                                     <ul className="list-unstyled footer-list mt-4">
                                         <li><Link href="/aboutus" className="text-foot"><i className="mdi mdi-chevron-right me-1"></i> About us</Link></li>
                                         <li><Link href="/services" className="text-foot"><i className="mdi mdi-chevron-right me-1"></i> Services</Link></li>
-                                        <li><Link href="/doctor-team-two" className="text-foot"><i className="mdi mdi-chevron-right me-1"></i> Team</Link></li>
-                                        <li><Link href="/blog-detail" className="text-foot"><i className="mdi mdi-chevron-right me-1"></i> Project</Link></li>
-                                        <li><Link href="/blogs" className="text-foot"><i className="mdi mdi-chevron-right me-1"></i> Blog</Link></li>
-                                        <li><Link href="/login" className="text-foot"><i className="mdi mdi-chevron-right me-1"></i> Login</Link></li>
+                                        {/* <li><Link href="/doctor-team-two" className="text-foot"><i className="mdi mdi-chevron-right me-1"></i> Team</Link></li> */}
+                                        {/* <li><Link href="/blog-detail" className="text-foot"><i className="mdi mdi-chevron-right me-1"></i> Project</Link></li> */}
+                                        {/* <li><Link href="/blogs" className="text-foot"><i className="mdi mdi-chevron-right me-1"></i> Blog</Link></li> */}
+                                        {/* <li><Link href="/login" className="text-foot"><i className="mdi mdi-chevron-right me-1"></i> Login</Link></li> */}
                                     </ul>
                                 </div>
 
-                                <div className="col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                                {/* <div className="col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
                                     <h5 className="footer-head">Departments</h5>
                                     <ul className="list-unstyled footer-list mt-4">
                                         <li><Link href="/departments" className="text-foot"><i className="mdi mdi-chevron-right me-1"></i> Eye Care</Link></li>
@@ -43,9 +43,9 @@ export default function Footer() {
                                         <li><Link href="/departments" className="text-foot"><i className="mdi mdi-chevron-right me-1"></i> Gynecology</Link></li>
                                         <li><Link href="/departments" className="text-foot"><i className="mdi mdi-chevron-right me-1"></i> Neurology</Link></li>
                                     </ul>
-                                </div>
+                                </div> */}
 
-                                <div className="col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                                <div className="col-md-6 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
                                     <h5 className="footer-head">Contact us</h5>
                                     <ul className="list-unstyled footer-list mt-4">
                                         <li className="d-flex align-items-center">
@@ -81,7 +81,7 @@ export default function Footer() {
                         <div className="row align-items-center">
                             <div className="col-sm-6">
                                 <div className="text-sm-start text-center">
-                                    <p className="mb-0">{new Date().getFullYear()}© Doctris. Design & Develop with <i className="mdi mdi-heart text-danger"></i> by <Link href="https://shreethemes.in/" target="_blank" className="text-reset">Shreethemes</Link>.</p>
+                                    <p className="mb-0">{new Date().getFullYear()}© Whitestone Dental Clinic.</p>
                                 </div>
                             </div>
 
