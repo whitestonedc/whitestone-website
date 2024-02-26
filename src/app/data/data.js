@@ -1405,8 +1405,8 @@ export const contact = [
     {
         icon: FiMapPin,
         title: 'Location',
-        desc: "Come to our office location",
+        desc: "East Legon, Bawaleshie, Opp MTN Office",
         link: '#',
-        name: 'View on Google map'
+        name: ''
     },
 ]
