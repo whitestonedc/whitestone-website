@@ -125,7 +125,7 @@ export default function Faqs() {
                                         <div className="card-body p-0 mt-4">
                                             <h5>Email</h5>
                                             <p className="text-muted">Great doctor if you need your family member to get effective assistance</p>
-                                            <Link href="mailto:contact@example.com" className="link">contact@example.com</Link>
+                                            <Link href="mailto:info@whitestonedentalclinic.com" className="link">info@whitestonedentalclinic.com</Link>
                                         </div>
                                     </div>
                                 </div>

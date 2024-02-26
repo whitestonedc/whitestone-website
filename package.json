@@ -1,7 +1,7 @@
 {
-  "name": "doctris",
+  "name": "whitestone",
   "version": "1.0.0",
-  "description": "Doctris - Next Js Doctor Appointment Booking System",
+  "description": "WhiteStone Dental Clinic",
   "private": true,
   "scripts": {
     "dev": "next dev",

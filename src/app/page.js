@@ -234,13 +234,7 @@ export default function IndexThree() {
                                                     <label className="form-label">Departments</label>
                                                     <select className="form-select form-control">
                                                         <option value="EY">Eye Care</option>
-                                                        <option value="GY">Gynecologist</option>
-                                                        <option value="PS">Psychotherapist</option>
-                                                        <option value="OR">Orthopedic</option>
                                                         <option value="DE">Dentist</option>
-                                                        <option value="GA">Gastrologist</option>
-                                                        <option value="UR">Urologist</option>
-                                                        <option value="NE">Neurologist</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -249,14 +243,7 @@ export default function IndexThree() {
                                                 <div className="mb-3">
                                                     <label className="form-label">Doctor</label>
                                                     <select className="form-select form-control">
-                                                        <option value="CA">Dr. Calvin Carlo</option>
-                                                        <option value="CR">Dr. Cristino Murphy</option>
-                                                        <option value="AL">Dr. Alia Reddy</option>
-                                                        <option value="TO">Dr. Toni Kovar</option>
-                                                        <option value="JE">Dr. Jessica McFarlane</option>
-                                                        <option value="EL">Dr. Elsie Sherman</option>
-                                                        <option value="BE">Dr. Bertha Magers</option>
-                                                        <option value="LO">Dr. Louis Batey</option>
+                                                        <option value="CA">Dr. Ransom</option>
                                                     </select>
                                                 </div>
                                             </div>

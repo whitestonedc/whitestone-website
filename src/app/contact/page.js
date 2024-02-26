@@ -74,7 +74,7 @@ export default function Contact() {
                         <div className="col-lg-7 col-md-6 mt-4 pt-2 mt-sm-0 pt-sm-0">
                             <div className="custom-form rounded shadow p-4">
                                 <h5 className="mb-4">Get in touch!</h5>
-                                <form action="mailto:info@whitestonedentalclinic.com" method="GET">
+                                <form action="mailto:info@whitestonedentalclinic.com" method="POST">
                                     <div className="row">
                                         <div className="col-md-6">
                                             <div className="mb-3">
