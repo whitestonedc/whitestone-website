@@ -111,7 +111,7 @@ export default function Faqs() {
                                         <div className="card-body p-0 mt-4">
                                             <h5>Phone</h5>
                                             <p className="text-muted">Great doctor if you need your family member to get effective assistance</p>
-                                            <Link href="tel:+152534-468-854" className="link">+152 534-468-854</Link>
+                                            <Link href="tel:+233 242-251-983" className="link">+233 242-251-983/+233 240-452-992</Link>
                                         </div>
                                     </div>
                                 </div>
