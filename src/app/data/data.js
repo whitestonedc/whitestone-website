@@ -1399,8 +1399,8 @@ export const contact = [
         icon: FiMail,
         title: 'Email',
         desc: 'Contact us via email',
-        link: 'mailto:contact@example.com',
-        name: 'contact@example.com'
+        link: 'mailto:info@whitestonedentalclinic.com',
+        name: 'info@whitestonedentalclinic.com'
     },
     {
         icon: FiMapPin,

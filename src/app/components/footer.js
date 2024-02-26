@@ -50,7 +50,7 @@ export default function Footer() {
                                     <ul className="list-unstyled footer-list mt-4">
                                         <li className="d-flex align-items-center">
                                             <FiMail className="fea icon-sm text-foot align-middle" />
-                                            <Link href="mailto:contact@example.com" className="text-foot ms-2">contact@example.com</Link>
+                                            <Link href="mailto:info@whitestonedentalclinic.com" className="text-foot ms-2">info@whitestonedentalclinic.com</Link>
                                         </li>
 
                                         <li className="d-flex align-items-center">
