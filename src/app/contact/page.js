@@ -12,7 +12,7 @@ export default function Contact() {
     return (
         <>
             <Navbar manuClass="navigation-menu nav-left nav-light" containerClass="container" />
-            <section className="bg-half-170 d-table w-100" style={{ backgroundImage: `url('/images/bg/03.jpg')`, backgroundPosition: 'center' }}>
+            <section className="bg-half-170 d-table w-100" style={{ backgroundImage: `url('/images/bg/contact.jpeg')`, backgroundPosition: 'center' }}>
                 <div className="bg-overlay bg-overlay-dark"></div>
                 <div className="container">
                     <div className="row mt-5 justify-content-center">
@@ -67,7 +67,7 @@ export default function Contact() {
                     <div className="row align-items-center">
                         <div className="col-lg-5 col-md-6">
                             <div className="me-lg-5">
-                                <Image src='/images/about/about-2.png' width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }} className="img-fluid" alt="" />
+                                <Image src='/images/about/about-2.jpeg' width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }} className="img-fluid" alt="" />
                             </div>
                         </div>
 

@@ -1391,21 +1391,21 @@ export const contact = [
     {
         icon: FiPhone,
         title: 'Phone',
-        desc: 'Great doctor if you need your family member to get effective assistance',
-        link: 'tel:+152534-468-854',
-        name: '+152 534-468-854'
+        desc: 'Reach us on phone',
+        link: 'tel:+233 242-251-983',
+        name: '+233 242-251-983/+233 240-452-992'
     },
     {
         icon: FiMail,
         title: 'Email',
-        desc: 'Great doctor if you need your family member to get effective assistance',
+        desc: 'Contact us via email',
         link: 'mailto:contact@example.com',
         name: 'contact@example.com'
     },
     {
         icon: FiMapPin,
         title: 'Location',
-        desc: "C/54 Northwest Freeway, Suite 558,Houston, USA 485",
+        desc: "Come to our office location",
         link: '#',
         name: 'View on Google map'
     },

@@ -22,8 +22,8 @@ export default function IndexThree() {
                     <div className="row justify-content-center mt-5">
                         <div className="col-xl-10">
                             <div className="heading-title text-center">
-                                <Image src='/images/WS-Logo-Main.png' width={194} height={50} alt="" />
-                                <h4 className="heading fw-bold text-white title-dark mt-3 mb-4">Booking Your Appointments</h4>
+                                {/* <Image src='/images/WS-Logo-Main.png' width={194} height={50} alt="" /> */}
+                                <h4 className="heading fw-bold text-white title-dark mt-3 mb-4">Book Your Appointments</h4>
                                 <p className="para-desc mx-auto text-white-50 mb-0">Great doctor if you need your family member to get effective immediate assistance, emergency treatment or a simple consultation.</p>
 
                                 <div className="mt-4 pt-2 col-md-10 offset-md-1"> {/* //Added "col-md-8 offset-md-2" to reduce the width of the form */}

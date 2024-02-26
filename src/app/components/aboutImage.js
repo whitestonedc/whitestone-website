@@ -11,11 +11,11 @@ export default function AboutImage({colClass}){
     return(
     <div className={colClass}>
         <div className="position-relative">
-            <Image src='/images/about/about-2.png' width={0} height={0} sizes='100vw' style={{width:'100%', height:'auto'}} className="img-fluid" alt=""/>
+            <Image src='/images/about/about-2.jpeg' width={0} height={0} sizes='100vw' style={{width:'100%', height:'auto'}} className="img-fluid" alt=""/>
             <div className="play-icon">
-                <Link href="#" scroll={false} onClick={() => setOpen(true)} className="play-btn lightbox video-play-icon">
+                {/* <Link href="#" scroll={false} onClick={() => setOpen(true)} className="play-btn lightbox video-play-icon">
                     <i className="mdi mdi-play text-primary rounded-circle shadow"></i>
-                </Link>
+                </Link> */}
             </div>
             <ModalVideo
 				channel="youtube"

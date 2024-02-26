@@ -14,7 +14,7 @@ export default function Faqs() {
     return (
         <>
             <Navbar manuClass="navigation-menu nav-light nav-left" containerClass="container" />
-            <section className="bg-half-170 d-table w-100" style={{ backgroundImage: `url('/images/bg/department.jpg')`, backgroundPosition: 'center' }}>
+            <section className="bg-half-170 d-table w-100" style={{ backgroundImage: `url('/images/bg/faqs.jpeg')`, backgroundPosition: 'center' }}>
                 <div className="bg-overlay bg-overlay-dark"></div>
                 <div className="container">
                     <div className="row mt-5 justify-content-center">

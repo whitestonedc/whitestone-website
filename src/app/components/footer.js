@@ -55,7 +55,7 @@ export default function Footer() {
 
                                         <li className="d-flex align-items-center">
                                             <FiPhone className="fea icon-sm text-foot align-middle" />
-                                            <Link href="tel:+152534-468-854" className="text-foot ms-2">+152 534-468-854</Link>
+                                            <Link href="tel:+233 242-251-983" className="text-foot ms-2">+233 242-251-983/+233 240-452-992</Link>
                                         </li>
 
                                         <li className="d-flex align-items-center">
