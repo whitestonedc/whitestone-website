@@ -46,14 +46,20 @@ export default function Departments() {
                             let Icon = item.icon
                             return (
                                 <div className="col-xl-3 col-lg-4 col-md-6 col-12 mt-4 pt-2" key={index}>
-                                    <div className="card features feature-primary border-0">
-                                        <div className="icon text-center rounded-md">
-                                            <Icon className="h3 mb-0" />
-                                        </div>
-                                        <div className="card-body p-0 mt-3">
-                                            <Link href="#" className="title text-dark h5">{item.title}</Link>
-                                            <p className="text-muted mt-3">{item.desc}</p>
-                                            {/* <Link href="#" className="link">Read More <FiArrowRight className="align-middle" /></Link> */}
+                                    <div 
+                                        data-aos="zoom-in"
+                                        data-aos-delay="50"
+                                        data-aos-duration="2000"
+                                    >
+                                        <div className="card features feature-primary border-0">
+                                            <div className="icon text-center rounded-md">
+                                                <Icon className="h3 mb-0" />
+                                            </div>
+                                            <div className="card-body p-0 mt-3">
+                                                <Link href="#" className="title text-dark h5">{item.title}</Link>
+                                                <p className="text-muted mt-3">{item.desc}</p>
+                                                {/* <Link href="#" className="link">Read More <FiArrowRight className="align-middle" /></Link> */}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

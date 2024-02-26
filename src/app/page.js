@@ -80,17 +80,23 @@ export default function IndexThree() {
 
             <section className="section pb-0">
                 <div className="container">
-                    <div className="row align-items-center">
-                        <AboutImage colClass="col-lg-5 col-md-6" />
+                    <div 
+                        data-aos="fade-in"
+                        data-aos-delay="50"
+                        data-aos-duration="2000"
+                        >
+                        <div className="row align-items-center">
+                            <AboutImage colClass="col-lg-5 col-md-6" />
 
-                        <div className="col-lg-7 col-md-6 mt-4 pt-2 mt-sm-0 pt-sm-0">
-                            <div className="section-title ms-lg-5">
-                                <span className="badge rounded-pill bg-soft-primary">About WhiteStone</span>
-                                <h4 className="title mt-3 mb-4">Good Services And Better <br /> Health By Our Specialists</h4>
-                                <p className="para-desc text-muted">Welcome to Whitestone Dental Clinic, where excellence in dentistry meets compassionate care. As your premier choice for dental health, we offer a comprehensive range of services tailored to meet your needs.</p>
-                                <p className="para-desc text-muted">From treating caries and gum diseases to tooth whitening, implants, and occlusion correction, our team of experienced dentists is dedicated to providing painless and meticulous care. Whether you require routine maintenance or complex procedures, trust us to deliver exceptional results with precision and professionalism. Your smile is our priority, and we&apos;re here to help you achieve optimal oral health and confidence. Schedule your appointment today and experience the difference at Whitestone Dental Clinic.</p>
-                                <div className="mt-4">
-                                    <Link href="/aboutus" className="btn btn-soft-primary">Read More</Link>
+                            <div className="col-lg-7 col-md-6 mt-4 pt-2 mt-sm-0 pt-sm-0">
+                                <div className="section-title ms-lg-5">
+                                    <span className="badge rounded-pill bg-soft-primary">About WhiteStone</span>
+                                    <h4 className="title mt-3 mb-4">Good Services And Better <br /> Health By Our Specialists</h4>
+                                    <p className="para-desc text-muted">Welcome to Whitestone Dental Clinic, where excellence in dentistry meets compassionate care. As your premier choice for dental health, we offer a comprehensive range of services tailored to meet your needs.</p>
+                                    <p className="para-desc text-muted">From treating caries and gum diseases to tooth whitening, implants, and occlusion correction, our team of experienced dentists is dedicated to providing painless and meticulous care. Whether you require routine maintenance or complex procedures, trust us to deliver exceptional results with precision and professionalism. Your smile is our priority, and we&apos;re here to help you achieve optimal oral health and confidence. Schedule your appointment today and experience the difference at Whitestone Dental Clinic.</p>
+                                    <div className="mt-4">
+                                        <Link href="/aboutus" className="btn btn-soft-primary">Read More</Link>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -113,14 +119,20 @@ export default function IndexThree() {
                             let Icon = item.icon
                             return (
                                 <div className="col-xl-3 col-md-4 col-12 mt-5" key={index}>
-                                    <div className="card features feature-primary bg-transparent border-0">
-                                        <div className="icon text-center rounded-md">
-                                            <Icon className="h3 mb-0" />
-                                        </div>
-                                        <div className="card-body p-0 mt-3">
-                                            <Link href="/services" className="title text-dark h5">{item.title}</Link>
-                                            <p className="text-muted mt-3">{item.desc}</p>
-                                            {/* <Link href="/services" className="link">Read More <RiArrowRightLine className="align-middle" /></Link> */}
+                                    <div 
+                                        data-aos="zoom-in"
+                                        data-aos-delay="50"
+                                        data-aos-duration="2000"
+                                    >
+                                        <div className="card features feature-primary bg-transparent border-0">
+                                            <div className="icon text-center rounded-md">
+                                                <Icon className="h3 mb-0" />
+                                            </div>
+                                            <div className="card-body p-0 mt-3">
+                                                <Link href="/services" className="title text-dark h5">{item.title}</Link>
+                                                <p className="text-muted mt-3">{item.desc}</p>
+                                                {/* <Link href="/services" className="link">Read More <RiArrowRightLine className="align-middle" /></Link> */}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -193,27 +205,33 @@ export default function IndexThree() {
                 <div className="container mt-50 mt-60"> {/* changed margin top from 100 to 50 */}
                     <div className="row align-items-lg-end">
                         <div className="col-md-6">
-                            <div className="me-xl-3">
-                                <div className="section-title mb-4 pb-2">
-                                    <MdOutlineEventNote className="text-primary h2" />
-                                    <h4 className="title mb-4">Book Your Appointment</h4>
-                                    <p className="text-muted para-desc mb-0">Schedule your visit today for exceptional dental care and a brighter, healthier smile tomorrow.</p>
+                            <div 
+                                data-aos="fade-in"
+                                data-aos-delay="50"
+                                data-aos-duration="2000"
+                            >
+                                <div className="me-xl-3">
+                                    <div className="section-title mb-4 pb-2">
+                                        <MdOutlineEventNote className="text-primary h2" />
+                                        <h4 className="title mb-4">Book Your Appointment</h4>
+                                        <p className="text-muted para-desc mb-0">Schedule your visit today for exceptional dental care and a brighter, healthier smile tomorrow.</p>
+                                    </div>
+                                    {contactData.map((item, index) => {
+                                        let Icon = item.icon
+                                        return (
+                                            <div className="features feature-bg-primary d-flex card flex-row p-4 rounded-md shadow position-relative overflow-hidden mt-4" key={index}>
+                                                <Icon className="icons display-3 mb-0 text-primary" />
+                                                <div className="ms-3">
+                                                    <h5 className="titles">{item.title}</h5>
+                                                    <p className="text-muted para mb-0">{item.desc}</p>
+                                                </div>
+                                                <div className="big-icon">
+                                                    <Icon />
+                                                </div>
+                                            </div>
+                                        )
+                                    })}
                                 </div>
-                                {contactData.map((item, index) => {
-                                    let Icon = item.icon
-                                    return (
-                                        <div className="features feature-bg-primary d-flex card flex-row p-4 rounded-md shadow position-relative overflow-hidden mt-4" key={index}>
-                                            <Icon className="icons display-3 mb-0 text-primary" />
-                                            <div className="ms-3">
-                                                <h5 className="titles">{item.title}</h5>
-                                                <p className="text-muted para mb-0">{item.desc}</p>
-                                            </div>
-                                            <div className="big-icon">
-                                                <Icon />
-                                            </div>
-                                        </div>
-                                    )
-                                })}
                             </div>
                         </div>
 
