@@ -1,29 +1,29 @@
-import { RiEyeFill, RiPsychotherapyFill, RiStethoscopeFill, RiCapsuleFill, RiMicroscopeFill, RiPulseFill, RiEmpathizeFill, RiMindMap, RiMentalHealthLine, RiAppleLine, RiInfraredThermometerLine, RiCapsuleLine, GrUserPolice, RiMicroscopeLine, TbAmbulance, RiShieldCrossLine, RiBriefcase4Line, FiAirplay, MdOutlineFlip, PiTelegramLogoBold, RiMailStarLine, RiHourglassLine, RiHeartLine, RiHeartPulseLine, RiStethoscopeLine, RiVirusLine, RiDossierLine, RiEye2Line, FiUser, FiMail, VscBook, MdFormatItalic, GiMedicalDrip, FiMapPin, FiBriefcase, LuFileCheck, MdOutlineStorefront, LuAward, LiaFileInvoiceDollarSolid, FiThumbsUp, FiPhone, } from '../assets/icons/vander'
+import { RiEyeFill, RiPsychotherapyFill, RiStethoscopeFill, RiCapsuleFill, RiMicroscopeFill, RiPulseFill, RiEmpathizeFill, RiMindMap, RiMentalHealthLine, RiAppleLine, RiInfraredThermometerLine, RiCapsuleLine, GrUserPolice, RiMicroscopeLine, TbAmbulance, RiShieldCrossLine, RiBriefcase4Line, FiAirplay, MdOutlineFlip, PiTelegramLogoBold, RiMailStarLine, RiHourglassLine, RiHeartLine, RiHeartPulseLine, RiStethoscopeLine, RiVirusLine, RiDossierLine, RiEye2Line, FiUser, FiMail, VscBook, MdFormatItalic, GiMedicalDrip, FiMapPin, FiBriefcase, LuFileCheck, MdOutlineStorefront, LuAward, LiaFileInvoiceDollarSolid, FiThumbsUp, FiPhone, TbDental, TbRestore, TbFaceMask, TbArrowBigDownLines, TbDentalBroken } from '../assets/icons/vander'
 
 
 export const medicalServices = [
     {
-        icon: RiEyeFill,
+        icon: TbDental,
         title: 'General Dental',
         desc: 'From routine cleanings to oral exams, our comprehensive general dental services focus on preventive care to maintain optimal oral health for you and your family.'
     },
     {
-        icon: RiPsychotherapyFill,
+        icon: TbRestore,
         title: 'Restorative Treatments',
         desc: 'We restore damaged or missing teeth with advanced restorative treatments, including fillings, crowns, and bridges, to enhance function and restore your smile\'s natural beauty.'
     },
     {
-        icon: RiStethoscopeFill,
+        icon: TbFaceMask,
         title: 'Cosmetic Treatments',
         desc: 'Transform your smile with our range of cosmetic treatments, including teeth whitening, veneers, and smile makeovers, designed to boost confidence and leave a lasting impression.'
     },
     {
-        icon: RiCapsuleFill,
+        icon: TbArrowBigDownLines,
         title: 'Dental Implants',
         desc: 'Experience the next best thing to natural teeth with our dental implant solutions, providing stable, long-lasting replacements for missing teeth, ensuring a confident smile and improved oral health.'
     },
     {
-        icon: RiMicroscopeFill,
+        icon: TbDentalBroken,
         title: 'Denture Treatments',
         desc: 'Regain confidence in your smile with our custom denture treatments, offering comfortable and natural-looking solutions for replacing missing teeth and restoring functionality to your bite.'
     },
