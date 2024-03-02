@@ -27,7 +27,7 @@ export default function Crud(){
             <Modal.Body>
                 <div className="modal-body p-3 pt-4">
                     <div className="d-flex align-items-center">
-                        <Image src='/images/client/01.jpg' width={65} height={65} className="avatar avatar-small rounded-pill" alt=""/>
+                        <Image src='/images/client/01.png' width={65} height={65} className="avatar avatar-small rounded-pill" alt=""/>
                         <h5 className="mb-0 ms-3">Howard Tanner</h5>
                     </div>
                     <ul className="list-unstyled mb-0 d-md-flex justify-content-between mt-4">

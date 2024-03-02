@@ -346,22 +346,22 @@ export const contactData = [
 ]
 export const latestAppointment = [
     {
-        image: '/images/client/01.jpg',
+        image: '/images/client/01.png',
         name: 'Calvin Carlo',
         date: 'Booking on 13th Sep, 2023'
     },
     {
-        image: '/images/client/02.jpg',
+        image: '/images/client/02.png',
         name: 'Joya Khan',
         date: 'Booking on 29th Nov, 2023'
     },
     {
-        image: '/images/client/03.jpg',
+        image: '/images/client/03.png',
         name: 'Amelia Muli',
         date: 'Booking on 29th Dec, 2023'
     },
     {
-        image: '/images/client/04.jpg',
+        image: '/images/client/04.png',
         name: 'Nik Ronaldo',
         date: 'Booking on 13th March, 2023'
     },
@@ -426,7 +426,7 @@ export const adminFeature = [
 export const appointmentData = [
     {
         id: 1,
-        clientImage: '/images/client/01.jpg',
+        clientImage: '/images/client/01.png',
         clientName: 'Howard Tanner',
         age: '25',
         gender: 'Male',
@@ -558,7 +558,7 @@ export const appointmentData = [
 export const invoiceData = [
     {
         id: '#d01',
-        image: '/images/client/01.jpg',
+        image: '/images/client/01.png',
         name: 'Howard Tanner',
         phone: '(+12)85-4521-7568',
         amount: '$253',
@@ -749,7 +749,7 @@ export const experienceData = [
 export const patientsData2 = [
     {
         id: '#d0001',
-        image: '/images/client/01.jpg',
+        image: '/images/client/01.png',
         name: 'Howard Tanner',
         gender: 'Male',
         Age: '25Year',
@@ -840,7 +840,7 @@ export const patientsData2 = [
 ]
 export const chatData = [
     {
-        image: '/images/client/01.jpg',
+        image: '/images/client/01.png',
         name: 'Christopher',
         time: '10 Min',
         message: 'Hello',
@@ -1313,7 +1313,7 @@ export const acccordianData = [
 ]
 export const commentData = [
     {
-        image: '/images/client/01.jpg',
+        image: '/images/client/01.png',
         name: 'Lorenzo Peterson',
         date: '13th March 2023 at 01:25pm',
         desc: '" There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour "'
