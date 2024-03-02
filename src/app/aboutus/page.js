@@ -45,18 +45,24 @@ export default function AboutUs() {
 
             <section className="section">
                 <div className="container">
-                    <div className="row align-items-center">
-                        <AboutImage colClass="col-lg-5 col-md-6" />
+                    <div 
+                        data-aos="fade-in"
+                        data-aos-delay="50"
+                        data-aos-duration="2000"
+                        >
+                        <div className="row align-items-center">
+                            <AboutImage colClass="col-lg-5 col-md-6" />
 
-                        <div className="col-lg-7 col-md-6 mt-4 mt-lg-0 pt- pt-lg-0">
-                            <div className="ms-lg-4">
-                                <div className="section-title me-lg-5">
-                                    <span className="badge rounded-pill bg-soft-primary">About WhiteStone</span>
-                                    <h4 className="title mt-3 mb-4">Good Services And Better <br /> Health By Our Specialists</h4>
-                                    <p className="para-desc text-muted">Welcome to Whitestone Dental Clinic, where excellence in dentistry meets compassionate care. As your premier choice for dental health, we offer a comprehensive range of services tailored to meet your needs. </p>
-                                    <p className="para-desc text-muted">From treating caries and gum diseases to tooth whitening, implants, and occlusion correction, our team of experienced dentists is dedicated to providing painless and meticulous care. Whether you require routine maintenance or complex procedures, trust us to deliver exceptional results with precision and professionalism. Your smile is our priority, and we&apos;re here to help you achieve optimal oral health and confidence. Schedule your appointment today and experience the difference at Whitestone Dental Clinic.</p>
-                                    <div className="mt-4">
-                                        {/* <Link href="" className="btn btn-soft-primary">Read More</Link> */}
+                            <div className="col-lg-7 col-md-6 mt-4 mt-lg-0 pt- pt-lg-0">
+                                <div className="ms-lg-4">
+                                    <div className="section-title me-lg-5">
+                                        <span className="badge rounded-pill bg-soft-primary">About WhiteStone</span>
+                                        <h4 className="title mt-3 mb-4">Good Services And Better <br /> Health By Our Specialists</h4>
+                                        <p className="para-desc text-muted">Welcome to Whitestone Dental Clinic, where excellence in dentistry meets compassionate care. As your premier choice for dental health, we offer a comprehensive range of services tailored to meet your needs. </p>
+                                        <p className="para-desc text-muted">From treating caries and gum diseases to tooth whitening, implants, and occlusion correction, our team of experienced dentists is dedicated to providing painless and meticulous care. Whether you require routine maintenance or complex procedures, trust us to deliver exceptional results with precision and professionalism. Your smile is our priority, and we&apos;re here to help you achieve optimal oral health and confidence. Schedule your appointment today and experience the difference at Whitestone Dental Clinic.</p>
+                                        <div className="mt-4">
+                                            {/* <Link href="" className="btn btn-soft-primary">Read More</Link> */}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
