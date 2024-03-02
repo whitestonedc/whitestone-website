@@ -149,60 +149,28 @@ export const counterData = [
 
 export const patientsData = [
     {
-        image: '/images/client/01.jpg',
-        name: '- Thomas Israel',
-        title: 'C.E.O',
-        desc: '" It seems that only fragments of the original text remain in the Lorem Ipsum texts used today. The most well-known dummy text is the Lorem Ipsum, which is said to have originated in the 16th century. "',
-        desc2: '" It seems that only melodies in order to have a ready-made text to sing with the melody of the originalthe Lorem Ipsum, which is said to have originated century. "'
+        image: '/images/client/01.png',
+        name: '- Agyeman Badu',
+        title: '',
+        desc: '" Their exceptional team members and competitive pricing make them an outstanding choice. "'
     },
     {
-        image: '/images/client/02.jpg',
-        name: '- Carl Oliver',
-        title: 'P.A',
-        desc: '" The advantage of its Latin origin and the relative meaninglessness of Lorum Ipsum is that the text does not attract attention to itself or distract the viewers attention from the layout. "',
-        desc2: '" The advantage of its writing melodies in order to have a ready-made text to sing with the melody and the to itself or distract the viewers attention from the layout. "'
+        image: '/images/client/02.png',
+        name: '- MzGee',
+        title: '',
+        desc: '" I am thoroughly impressed with the comfortable, inviting atmosphere at Whitestone Dental Clinic. Their procedures are conducted with utmost professionalism and care, creating a positive experience. I highly recommend Whitestone Dental Clinic for exceptional dental care. "'
     },
     {
-        image: '/images/client/03.jpg',
-        name: '- Barbara McIntosh',
-        title: 'M.D',
-        desc: '" There is now an abundance of readable dummy texts. These are usually used when a text is required purely to fill a space. These alternatives to the classic Lorem Ipsum texts are often amusing and tell short, funny or nonsensical stories. "',
-        desc2: '" There is now an in order to have a ready-made text to sing with the melody alternatives to the classic Lorem Ipsum texts are amusing. "'
+        image: '/images/client/03.png',
+        name: '- Samuel Osei Kuffuor',
+        title: '',
+        desc: '" The services provided by Whitestone Dental Clinic are truly remarkable. The staff members exhibit exceptional professionalism and expertise. I highly recommend experiencing their outstanding care firsthand. "'
     },
     {
-        image: '/images/client/04.jpg',
-        name: '- Christa Smith',
-        title: 'Manager',
-        desc: '" According to most sources, Lorum Ipsum can be traced back to a text composed by Cicero in 45 BC. Allegedly, a Latin scholar established the origin of the text by compiling all the instances of the unusual word consectetur he could find "',
-        desc2: '" According to most sources in order to have a ready-made text to sing with the melody the origin of the text by compiling all the instances. "'
-    },
-    {
-        image: '/images/client/05.jpg',
-        name: '- Dean Tolle',
-        title: 'Developer',
-        desc: '" It seems that only fragments of the original text remain in the Lorem Ipsum texts used today. The most well-known dummy text is the Lorem Ipsum, which is said to have originated in the 16th century. "',
-        desc2: '" It seems that only in order to have a ready-made text to sing with the melody Lorem Ipsum, which is said to have originated 16th century. "'
-    },
-    {
-        image: '/images/client/06.jpg',
-        name: '- Jill Webb',
-        title: 'Designer',
-        desc: '" It seems that only fragments of the original text remain in the Lorem Ipsum texts used today. One may speculate that over the course of time certain letters were added or deleted at various positions within the text. "',
-        desc2: '" It seems that only lyrics when writing melodies in order to have a ready-made text to sing with the melody of time certain letters were added or deleted at the text. "'
-    },
-    {
-        image: '/images/client/07.jpg',
-        name: '- Howard Tanner',
-        title: 'C.E.O',
-        desc: '" It seems that only fragments of the original text remain in the Lorem Ipsum texts used today. The most well-known dummy text is the Lorem Ipsum, which is said to have originated in the 16th century. "',
-        desc2: '" It seems that only in order to have a ready-made text to sing with the melody Lorem Ipsum, which is said to have originated 16th century. "'
-    },
-    {
-        image: '/images/client/08.jpg',
-        name: '- Wendy Filson',
-        title: 'Designer',
-        desc: '" It seems that only fragments of the original text remain in the Lorem Ipsum texts used today. One may speculate that over the course of time certain letters were added or deleted at various positions within the text. "',
-        desc2: '" It seems that only lyrics when writing melodies in order to have a ready-made text to sing with the melody of time certain letters were added or deleted at the text. "'
+        image: '/images/client/04.png',
+        name: '- Abeiku Santana',
+        title: '',
+        desc: '" After experiencing the seamless procedure at Whitestone Dental Clinic, I can confidently say they provide exceptional service. Don\'t hesitate to choose Whitestone Dental Clinic for your dental needs. "'
     },
 ]
 
