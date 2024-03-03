@@ -3,9 +3,62 @@ import { useState } from 'react';
 import Link from 'next/link';
 
 import Modal from 'react-bootstrap/Modal';
+import Alert from 'react-bootstrap/Alert';
 
 export default function AddApointment(){
     let [show, setShow] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(false);
+    const [success, setSuccess] = useState(false);
+    const [patientName, setPatientName] = useState('');
+    const [department, setDepartment] = useState('');
+    const [doctor, setDoctor] = useState('');
+    const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState('');
+    const [appointmentDateTime, setAppointmentDateTime] = useState('');
+    const [comment, setComment] = useState('');
+
+    const sendDetails = async (e) => {
+        e.preventDefault();
+
+        setLoading(true);
+
+        fetch('/api/appointments', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                patientName: patientName,
+                department: department,
+                doctor: doctor,
+                email: email,
+                phone: phone,
+                appointmentDateTime: appointmentDateTime,
+                comment: comment,
+                approved: false
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if(data.success === true) {
+                setLoading(false);
+                setPatientName('');
+                setDepartment('');
+                setDoctor('');
+                setEmail('');
+                setPhone('');
+                setAppointmentDateTime('');
+                setComment('');
+                setSuccess(true);
+            }
+        })
+        .catch(error => {
+            console.error(error);
+            setError(true);
+            setLoading(false);
+        });
+    };
 
     let handleClose = () => setShow(false);
     let handleShow = () => setShow(true);
@@ -28,22 +81,17 @@ export default function AddApointment(){
                             <div className="col-lg-12">
                                 <div className="mb-3">
                                     <label className="form-label">Patient Name <span className="text-danger">*</span></label>
-                                    <input name="name" id="name" type="text" className="form-control" placeholder="Patient Name :"/>
+                                    <input name="name" id="name" type="text" className="form-control" onChange={e => setPatientName(e.target.value)} value={patientName} placeholder="Patient Name :" required />
                                 </div>
                             </div>
                             
                             <div className="col-lg-4 col-md-6">
                                 <div className="mb-3">
                                     <label className="form-label">Departments</label>
-                                    <select className="form-select form-control">
-                                        <option value="EY">Eye Care</option>
-                                        <option value="GY">Gynecologist</option>
-                                        <option value="PS">Psychotherapist</option>
-                                        <option value="OR">Orthopedic</option>
-                                        <option value="DE">Dentist</option>
-                                        <option value="GA">Gastrologist</option>
-                                        <option value="UR">Urologist</option>
-                                        <option value="NE">Neurologist</option>
+                                    <select className="form-select form-control" onChange={e => setDepartment(e.target.value)} value={department} required>
+                                        <option value="">Select one</option>
+                                        <option value="Dentist">Dentist</option>
+                                        <option value="Eye Care">Eye Care</option>
                                     </select>
                                 </div>
                             </div>
@@ -51,15 +99,10 @@ export default function AddApointment(){
                             <div className="col-lg-4 col-md-6">
                                 <div className="mb-3">
                                     <label className="form-label">Doctor</label>
-                                    <select className="form-select form-control">
-                                        <option value="CA">Dr. Calvin Carlo</option>
-                                        <option value="CR">Dr. Cristino Murphy</option>
-                                        <option value="AL">Dr. Alia Reddy</option>
-                                        <option value="TO">Dr. Toni Kovar</option>
-                                        <option value="JE">Dr. Jessica McFarlane</option>
-                                        <option value="EL">Dr. Elsie Sherman</option>
-                                        <option value="BE">Dr. Bertha Magers</option>
-                                        <option value="LO">Dr. Louis Batey</option>
+                                    <select className="form-select form-control" onChange={e => setDoctor(e.target.value)} value={doctor} required>
+                                        <option value="">Select one</option>
+                                        <option value="Dr. Anthony Adarkwa">Dr. Anthony Adarkwa</option>
+                                        <option value="Dr. Ransom Anang">Dr. Ransom Anang</option>
                                     </select>
                                 </div>
                             </div>
@@ -67,41 +110,72 @@ export default function AddApointment(){
                             <div className="col-lg-4 col-md-6">
                                 <div className="mb-3">
                                     <label className="form-label">Your Email <span className="text-danger">*</span></label>
-                                    <input name="email" id="email" type="email" className="form-control" placeholder="Your email :"/>
+                                    <input name="email" id="email" type="email" className="form-control" placeholder="Your email :" onChange={e => setEmail(e.target.value)} value={email} required />
                                 </div> 
                             </div>
 
                             <div className="col-lg-4 col-md-6">
                                 <div className="mb-3">
                                     <label className="form-label">Your Phone <span className="text-danger">*</span></label>
-                                    <input name="phone" id="phone" type="tel" className="form-control" placeholder="Your Phone :"/>
+                                    <input name="phone" id="phone" type="tel" className="form-control" placeholder="Your Phone :" onChange={e => setPhone(e.target.value)} value={phone} required />
                                 </div> 
                             </div>
 
-                            <div className="col-lg-4 col-md-6">
+                            <div className="col-lg-4 col-md-12">
                                 <div className="mb-3">
                                     <label className="form-label"> Date : </label>
-                                    <input name="date" type="date" className="form-control start" placeholder="Select date :"/>
+                                    <input name="date" type="date" className="form-control start" placeholder="Select date :" onChange={e => setAppointmentDateTime(e.target.value)} min={new Date().toISOString().split("T")[0]} value={appointmentDateTime} required />
                                 </div>
-                            </div>
-
-                            <div className="col-lg-4 col-md-6">
-                                <div className="mb-3">
-                                    <label className="form-label" htmlFor="input-time">Time : </label>
-                                    <input name="time" type="text" className="form-control timepicker" id="input-time" placeholder="03:30 PM"/>
-                                </div> 
                             </div>
 
                             <div className="col-lg-12">
                                 <div className="mb-3">
                                     <label className="form-label">Comments <span className="text-danger">*</span></label>
-                                    <textarea name="comments" id="comments" rows="4" className="form-control" placeholder="Your Message :"></textarea>
+                                    <textarea name="comments" id="comments" rows="4" className="form-control" onChange={e => setComment(e.target.value)} value={comment} required  placeholder="Your Message :"></textarea>
                                 </div>
                             </div>
 
+
+
+                            {
+                                success === true ? (
+                                    <div className="col-lg-12">
+                                        <div className="mb-3">
+                                            <Alert variant="success">
+                                                Your booking is successful!
+                                            </Alert>
+                                        </div>
+                                    </div>
+                                ) : (
+                                    null
+                                )
+                            }
+
+                            {
+                                error === true ? (
+                                    <div className="col-lg-12">
+                                        <div className="mb-3">
+                                            <Alert variant="danger">
+                                                Please try later!
+                                            </Alert>
+                                        </div>
+                                    </div>
+                                ) : (
+                                    null
+                                )
+                            }
+
                             <div className="col-lg-12">
                                 <div className="d-grid">
-                                    <button type="submit" className="btn btn-primary">Book An Appointment</button>
+                                    {
+                                        loading ? (
+                                            <button className="btn btn-primary" style={{ alignItems: 'center' }} disabled>
+                                                <div className="loader"></div>
+                                            </button>
+                                        ) : (
+                                            <button type="submit" className="btn btn-primary">Book An Appointment</button>
+                                        )
+                                    }
                                 </div>
                             </div>
                         </div>

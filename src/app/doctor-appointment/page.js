@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from 'next/navigation';
 
 import Navbar from "../components/navbar";
 import Sidebar from "../components/sidebar";
@@ -14,11 +15,17 @@ import { appointmentData } from "../data/data";
 import moment from "moment";
 
 export default function DoctorAppointment() {
+    const router = useRouter();
+
     const [list, setList] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
 
     useEffect(() => {
+        if(!localStorage.getItem('userDetails')) {
+            router.push('/login');
+        };
+
         const fetchAppointments = async () => {
             const res = await fetch('/api/appointments');
             const data = await res.json();
@@ -73,45 +80,52 @@ export default function DoctorAppointment() {
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            {list.map((item, index) => {
-                                                return(
-                                                    <tr key={index}>
-                                                        {/* <th className="p-3">{item._id}</th> */}
-                                                        <td className="p-3">
-                                                            <Link href="#" className="text-dark">
-                                                                <div className="d-flex align-items-center">
-                                                                    {/* <Image src={item.clientImage} width={45} height={45} className="avatar avatar-md-sm rounded-circle shadow" alt=""/> */}
-                                                                    <span className="ms-2">{item.patientName}</span>
-                                                                </div>
-                                                            </Link>
-                                                        </td>
-                                                        <td className="p-3">{item.phone}</td>
-                                                        <td className="p-3">{item.email}</td>
-                                                        <td className="p-3">{item.department}</td>
-                                                        <td className="p-3">{moment.utc(item.appointmentDateTime).local().format('MMM DD, YYYY, hh:mm A')}</td>
-                                                        <td className="p-3">
-                                                            <Link href="#" className="text-dark">
-                                                                <div className="d-flex align-items-center">
-                                                                    {/* <Image src={item.drImage} width={45} height={45} className="avatar avatar-md-sm rounded-circle border shadow" alt=""/> */}
-                                                                    <span className="ms-2">{item.doctor}</span>
-                                                                </div>
-                                                            </Link>
-                                                        </td>
-                                                        <Crud/>
+                                            {
+                                                loading ? (
+                                                    <tr>
+                                                        <td colSpan={7}><div className="loader" /></td>
                                                     </tr>
+                                                ) : (
+                                                    list.map((item, index) => {
+                                                        return(
+                                                            <tr key={index}>
+                                                                {/* <th className="p-3">{item._id}</th> */}
+                                                                <td className="p-3">
+                                                                    <Link href="#" className="text-dark">
+                                                                        <div className="d-flex align-items-center">
+                                                                            {/* <Image src={item.clientImage} width={45} height={45} className="avatar avatar-md-sm rounded-circle shadow" alt=""/> */}
+                                                                            <span className="ms-2">{item.patientName}</span>
+                                                                        </div>
+                                                                    </Link>
+                                                                </td>
+                                                                <td className="p-3">{item.phone}</td>
+                                                                <td className="p-3">{item.email}</td>
+                                                                <td className="p-3">{item.department}</td>
+                                                                <td className="p-3">{moment.utc(item.appointmentDateTime).local().format('MMM DD, YYYY, hh:mm A')}</td>
+                                                                <td className="p-3">
+                                                                    <Link href="#" className="text-dark">
+                                                                        <div className="d-flex align-items-center">
+                                                                            {/* <Image src={item.drImage} width={45} height={45} className="avatar avatar-md-sm rounded-circle border shadow" alt=""/> */}
+                                                                            <span className="ms-2">{item.doctor}</span>
+                                                                        </div>
+                                                                    </Link>
+                                                                </td>
+                                                                <Crud/>
+                                                            </tr>
+                                                        )
+                                                    })
                                                 )
-                                            })}
+                                            }
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="row text-center">
+                        {/* <div className="row text-center">
                             
                             <div className="col-12 mt-4">
                                 <div className="d-md-flex align-items-center text-center justify-content-between">
-                                    {/* <span className="text-muted me-3">Showing 1 - 10 out of 50</span> */}
                                     <ul className="pagination justify-content-center mb-0 mt-3 mt-sm-0">
                                         <li className="page-item"><Link className="page-link" href="#" aria-label="Previous">Prev</Link></li>
                                         <li className="page-item active"><Link className="page-link" href="#">1</Link></li>
@@ -122,7 +136,7 @@ export default function DoctorAppointment() {
                                 </div>
                             </div>
                             
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

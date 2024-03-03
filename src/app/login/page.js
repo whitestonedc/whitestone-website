@@ -1,12 +1,72 @@
-import React from "react";
+'use client'
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from 'next/navigation';
 
 
-import {FiHome,SlSocialGoogle } from '../assets/icons/vander'
-import {FaSquareFacebook} from 'react-icons/fa6'
+import {FiHome,SlSocialGoogle } from '../assets/icons/vander';
+import {FaSquareFacebook} from 'react-icons/fa6';
+import Alert from 'react-bootstrap/Alert';
+import axios from "axios";
 
-export default function Login(){
+export default function Login() {
+    const router = useRouter();
+
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const loginUser = async (e) => {
+        e.preventDefault();
+
+        setLoading(true);
+
+        try {
+            var config = {
+              headers: {
+                'Content-Type': 'application/json'
+              }
+            };
+        
+            var data = {
+              "email": email,
+              "password": password
+            };
+            
+            var url = '/api/auth';
+        
+            axios.post(url, data, config)
+            .then(async (res) => {
+              setLoading(false);
+              if(res.data.success) {
+                localStorage.setItem('userDetails', JSON.stringify(res.data.user));
+                router.push('/doctor-appointment');
+              }
+            })
+            .catch(error => {
+              console.log(error);
+              
+              if (error.response) {
+                setLoading(false);
+                setError(error.response.data.message);
+              } else if (error.request) {
+                console.log(error.request);
+                setLoading(false);
+                setError('Problem signing in. Please try later!');
+              } else {
+                setLoading(false);
+                setError('Problem signing in. Please try later!');
+              }
+            });
+            
+          } catch (error) {
+            setLoading(false);
+            console.log(error);
+          }
+    };
+
     return(
         <>
         <div className="back-to-home rounded d-none d-sm-block">
@@ -22,21 +82,35 @@ export default function Login(){
                         <div className="card login-page shadow mt-4 rounded border-0">
                             <div className="card-body">
                                 <h4 className="text-center">Sign In</h4>  
-                                <form action="doctor-dashboard.html" className="login-form mt-4">
+                                <form onSubmit={(e) => loginUser(e)} className="login-form mt-4">
                                     <div className="row">
                                         <div className="col-lg-12">
                                             <div className="mb-3">
                                                 <label className="form-label">Your Email <span className="text-danger">*</span></label>
-                                                <input type="email" className="form-control" placeholder="Email" name="email" required=""/>
+                                                <input type="email" className="form-control" placeholder="Email" name="email" onChange={e => setEmail(e.target.value)} value={email} required=""/>
                                             </div>
                                         </div>
 
                                         <div className="col-lg-12">
                                             <div className="mb-3">
                                                 <label className="form-label">Password <span className="text-danger">*</span></label>
-                                                <input type="password" className="form-control" placeholder="Password" required=""/>
+                                                <input type="password" className="form-control" placeholder="Password" onChange={e => setPassword(e.target.value)} value={password} required=""/>
                                             </div>
                                         </div>
+
+                                        {
+                                            error?.length > 0 ? (
+                                                <div className="col-lg-12">
+                                                    <div className="mb-3">
+                                                        <Alert variant="danger">
+                                                            {error}
+                                                        </Alert>
+                                                    </div>
+                                                </div>
+                                            ) : (
+                                                null
+                                            )
+                                        }
 
                                         {/* <div className="col-lg-12">
                                             <div className="d-flex justify-content-between">
@@ -51,7 +125,15 @@ export default function Login(){
                                         </div> */}
                                         <div className="col-lg-12 mb-0">
                                             <div className="d-grid">
-                                                <button className="btn btn-primary">Sign in</button>
+                                                {
+                                                    loading ? (
+                                                        <button className="btn btn-primary" style={{ alignItems: 'center' }} disabled>
+                                                            <div className="loader"></div>
+                                                        </button>
+                                                    ) : (
+                                                        <button className="btn btn-primary">Sign in</button>
+                                                    )
+                                                }
                                             </div>
                                         </div>
 

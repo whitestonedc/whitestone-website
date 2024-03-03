@@ -2,13 +2,15 @@
 import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useRouter } from 'next/navigation';
 
 import {RiAirplayLine,RiCalendarCheckLine,RiTimerLine, RiPagesLine,RiMailUnreadLine,RiUser2Line,RiUserSettingsLine,RiEmpathizeLine,RiChat1Line,RiChatVoiceLine,RiLoginCircleLine, RiDeviceRecoverLine} from '../assets/icons/vander'
 import Image from "next/image";
 import moment from "moment";
 
 export default function Sidebar({colClass}) {
-    let location = usePathname()
+    let location = usePathname();
+    const router = useRouter();
     
     return(
         <>
@@ -35,8 +37,8 @@ export default function Sidebar({colClass}) {
                     <li className={`${location === '/patient-list'? 'active' : ''} navbar-item mb-2`}><Link href="/patient-list" className="navbar-link"><RiEmpathizeLine className="align-middle navbar-icon"/> Patients</Link></li>
                     <li className={`${location === '/patient-review'? 'active' : ''} navbar-item mb-2`}><Link href="/patient-review" className="navbar-link"><RiChat1Line className="align-middle navbar-icon"/> Patients Review</Link></li>
                     <li className={`${location === '/doctor-chat'? 'active' : ''} navbar-item mb-2`}><Link href="/doctor-chat" className="navbar-link"><RiChatVoiceLine className="align-middle navbar-icon"/> Chat</Link></li>
-                    <li className={`${location === '/login'? 'active' : ''} navbar-item mb-2`}><Link href="/login" className="navbar-link"><RiLoginCircleLine className="align-middle navbar-icon"/> Login</Link></li>
-                    <li className="navbar-item"><Link href="/forgot-password" className="navbar-link"><RiDeviceRecoverLine className="align-middle navbar-icon"/> Forgot Password</Link></li> */}
+                    <li className={`${location === '/login'? 'active' : ''} navbar-item mb-2`}><Link href="/login" className="navbar-link"><RiLoginCircleLine className="align-middle navbar-icon"/> Login</Link></li> */}
+                    <li className="navbar-item"><Link href="/logout" className="navbar-link" onClick={(e) => { e.preventDefault(); localStorage.removeItem('userDetails'); router.push('/login'); }}><RiDeviceRecoverLine className="align-middle navbar-icon"/> Logout</Link></li>
                 </ul>
             </div>
         </div>

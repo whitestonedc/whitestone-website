@@ -64,6 +64,7 @@ export default function IndexThree() {
         .catch(error => {
             console.error(error);
             setError(true);
+            setLoading(false);
         });
     };
 
