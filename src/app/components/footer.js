@@ -25,7 +25,7 @@ export default function Footer() {
                                     <ul className="list-unstyled footer-list mt-4">
                                         <li><Link href="/aboutus" className="text-foot"><i className="mdi mdi-chevron-right me-1"></i> About us</Link></li>
                                         <li><Link href="/services" className="text-foot"><i className="mdi mdi-chevron-right me-1"></i> Services</Link></li>
-                                        {/* <li><Link href="/doctor-team-two" className="text-foot"><i className="mdi mdi-chevron-right me-1"></i> Team</Link></li> */}
+                                        <li><Link href="#" className="text-foot"><i className="mdi mdi-chevron-right me-1"></i> Eye Care</Link></li>
                                         {/* <li><Link href="/blog-detail" className="text-foot"><i className="mdi mdi-chevron-right me-1"></i> Project</Link></li> */}
                                         {/* <li><Link href="/blogs" className="text-foot"><i className="mdi mdi-chevron-right me-1"></i> Blog</Link></li> */}
                                         {/* <li><Link href="/login" className="text-foot"><i className="mdi mdi-chevron-right me-1"></i> Login</Link></li> */}
