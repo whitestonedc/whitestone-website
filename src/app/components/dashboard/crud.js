@@ -15,7 +15,7 @@ export default function Crud(){
     return(
         <>
         <td className="text-end p-3">
-            <Link href="#" className="btn btn-icon btn-pills btn-soft-primary" onClick={() =>setShow(!show)}><FiEye /></Link>
+            {/* <Link href="#" className="btn btn-icon btn-pills btn-soft-primary" onClick={() =>setShow(!show)}><FiEye /></Link> */}
             <Link href="#" className="btn btn-icon btn-pills btn-soft-success mx-1" onClick={() =>setShow2(!show2)}><MdOutlineCheckCircleOutline /></Link>
             <Link href="#" className="btn btn-icon btn-pills btn-soft-danger" onClick={() =>setShow3(!show3)}><LiaTimesCircleSolid /></Link>
         </td>

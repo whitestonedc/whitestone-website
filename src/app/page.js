@@ -1,4 +1,5 @@
-import React from "react";
+'use client';
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Navbar from "./components/navbar";
@@ -10,8 +11,62 @@ import AboutImage from "./components/aboutImage";
 import CtaThree from "./components/cta/ctaThree";
 import Footer from "./components/footer";
 import ScrollTop from "./components/scrollTop";
+import Alert from 'react-bootstrap/Alert';
 
 export default function IndexThree() {
+    const [list, setList] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(false);
+    const [success, setSuccess] = useState(false);
+    const [patientName, setPatientName] = useState('');
+    const [department, setDepartment] = useState('');
+    const [doctor, setDoctor] = useState('');
+    const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState('');
+    const [appointmentDateTime, setAppointmentDateTime] = useState('');
+    const [comment, setComment] = useState('');
+
+    const sendDetails = async (e) => {
+        e.preventDefault();
+
+        setLoading(true);
+
+        fetch('/api/appointments', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                patientName: patientName,
+                department: department,
+                doctor: doctor,
+                email: email,
+                phone: phone,
+                appointmentDateTime: appointmentDateTime,
+                comment: comment,
+                approved: false
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if(data.success === true) {
+                setLoading(false);
+                setPatientName('');
+                setDepartment('');
+                setDoctor('');
+                setEmail('');
+                setPhone('');
+                setAppointmentDateTime('');
+                setComment('');
+                setSuccess(true);
+            }
+        })
+        .catch(error => {
+            console.error(error);
+            setError(true);
+        });
+    };
+
     return (
         <>
             <Navbar manuClass="navigation-menu nav-left nav-light" containerClass="container" />
@@ -27,7 +82,7 @@ export default function IndexThree() {
                                 <p className="para-desc mx-auto text-white-50 mb-0">Transforming lives through exceptional dental care. Our experienced team is dedicated to your comfort and satisfaction.</p>
 
                                 <div className="mt-4 pt-2 col-md-10 offset-md-1"> {/* //Added "col-md-8 offset-md-2" to reduce the width of the form */}
-                                    <form className="rounded text-start shadow p-4 bg-white-50">
+                                    <div className="rounded text-start shadow p-4 bg-white-50">
                                         <div className="row align-items-center">
                                             {/* <div className="col-md">
                                                 <div className="input-group bg-white border rounded" style={{ opacity: '0.7' }}>
@@ -39,17 +94,17 @@ export default function IndexThree() {
                                             <div className="col-md mt-4 mt-sm-0">
                                                 <div className="input-group bg-white border rounded" style={{ opacity: '0.7' }}>
                                                     <span className="input-group-text border-0"><RiUser2Line className="text-primary h5 fw-normal mb-0" /></span>
-                                                    <input name="name" id="name" type="text" className="form-control border-0" placeholder="Your Name:" />
+                                                    <input name="name" id="name" type="text" className="form-control border-0" onChange={e => setPatientName(e.target.value)} placeholder="Your Name:" />
                                                 </div>
                                             </div>
 
                                             <div className="col-md-auto mt-4 mt-sm-0">
                                                 <div className="d-grid d-md-block">
-                                                    <button type="submit" className="btn btn-primary">Book</button>
+                                                    <a className="btn btn-primary" href="#bookingForm">Book</a>
                                                 </div>
                                             </div>
                                         </div>
-                                    </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -202,7 +257,7 @@ export default function IndexThree() {
                     </div>
                 </div> */}
 
-                <div className="container mt-50 mt-60"> {/* changed margin top from 100 to 50 */}
+                <div className="container mt-50 mt-60" id="bookingForm"> {/* changed margin top from 100 to 50 */}
                     <div className="row align-items-lg-end">
                         <div className="col-md-6">
                             <div 
@@ -238,21 +293,22 @@ export default function IndexThree() {
                         <div className="col-md-6 mt-4 mt-sm-0 pt-2 pt-sm-0">
                             <div className="card border-0 rounded shadow p-4 ms-xl-3">
                                 <div className="custom-form">
-                                    <form>
+                                    <form onSubmit={(e) => sendDetails(e)}>
                                         <div className="row">
                                             <div className="col-lg-12">
                                                 <div className="mb-3">
-                                                    <label className="form-label">Patient Name <span className="text-danger">*</span></label>
-                                                    <input name="name" id="name1" type="text" className="form-control" placeholder="Patient Name :" />
+                                                    <label className="form-label">Name <span className="text-danger">*</span></label>
+                                                    <input name="name" id="name1" type="text" className="form-control" onChange={e => setPatientName(e.target.value)} placeholder="Your Name :" value={patientName} required />
                                                 </div>
                                             </div>
 
                                             <div className="col-lg-6">
                                                 <div className="mb-3">
                                                     <label className="form-label">Departments</label>
-                                                    <select className="form-select form-control">
-                                                        <option value="EY">Eye Care</option>
-                                                        <option value="DE">Dentist</option>
+                                                    <select className="form-select form-control" onChange={e => setDepartment(e.target.value)} value={department} required>
+                                                        <option value="">Select one</option>
+                                                        <option value="Dentist">Dentist</option>
+                                                        <option value="Eye Care">Eye Care</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -260,8 +316,10 @@ export default function IndexThree() {
                                             <div className="col-lg-6">
                                                 <div className="mb-3">
                                                     <label className="form-label">Doctor</label>
-                                                    <select className="form-select form-control">
-                                                        <option value="CA">Dr. Ransom</option>
+                                                    <select className="form-select form-control" onChange={e => setDoctor(e.target.value)} value={doctor} required>
+                                                        <option value="">Select one</option>
+                                                        <option value="Dr. Anthony Adarkwa">Dr. Anthony Adarkwa</option>
+                                                        <option value="Dr. Ransom Anang">Dr. Ransom Anang</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -269,41 +327,70 @@ export default function IndexThree() {
                                             <div className="col-lg-6">
                                                 <div className="mb-3">
                                                     <label className="form-label">Your Email <span className="text-danger">*</span></label>
-                                                    <input name="email" id="email" type="email" className="form-control" placeholder="Your email :" />
+                                                    <input name="email" id="email" type="email" className="form-control" onChange={e => setEmail(e.target.value)} value={email} required placeholder="Your email :" />
                                                 </div>
                                             </div>
 
                                             <div className="col-lg-6">
                                                 <div className="mb-3">
                                                     <label className="form-label">Your Phone <span className="text-danger">*</span></label>
-                                                    <input name="phone" id="phone" type="tel" className="form-control" placeholder="Your Phone :" />
+                                                    <input name="phone" id="phone" type="tel" className="form-control" onChange={e => setPhone(e.target.value)} value={phone} required placeholder="Your Phone :" />
                                                 </div>
                                             </div>
 
-                                            <div className="col-lg-6">
+                                            <div className="col-lg-12">
                                                 <div className="mb-3">
                                                     <label className="form-label"> Date <span className="text-danger">*</span></label>
-                                                    <input name="date" type="text" className="form-control start" placeholder="Select date :" />
-                                                </div>
-                                            </div>
-
-                                            <div className="col-lg-6">
-                                                <div className="mb-3">
-                                                    <label className="form-label" htmlFor="input-time">Time <span className="text-danger">*</span></label>
-                                                    <input name="time" type="text" className="form-control timepicker" id="input-time" placeholder="03:30 PM" />
+                                                    <input name="date" type="datetime-local" className="form-control start" onChange={e => setAppointmentDateTime(e.target.value)} min={new Date().toISOString().split("T")[0]} value={appointmentDateTime} required  placeholder="Select date :" />
                                                 </div>
                                             </div>
 
                                             <div className="col-lg-12">
                                                 <div className="mb-3">
                                                     <label className="form-label">Comments <span className="text-danger">*</span></label>
-                                                    <textarea name="comments" id="comments" rows="4" className="form-control" placeholder="Your Message :"></textarea>
+                                                    <textarea name="comments" id="comments" rows="4" className="form-control" onChange={e => setComment(e.target.value)} value={comment} required placeholder="Your Message :"></textarea>
                                                 </div>
                                             </div>
 
+                                            {
+                                                success === true ? (
+                                                    <div className="col-lg-12">
+                                                        <div className="mb-3">
+                                                            <Alert variant="success">
+                                                                Your booking is successful!
+                                                            </Alert>
+                                                        </div>
+                                                    </div>
+                                                ) : (
+                                                    null
+                                                )
+                                            }
+
+                                            {
+                                                error === true ? (
+                                                    <div className="col-lg-12">
+                                                        <div className="mb-3">
+                                                            <Alert variant="danger">
+                                                                Please try later!
+                                                            </Alert>
+                                                        </div>
+                                                    </div>
+                                                ) : (
+                                                    null
+                                                )
+                                            }
+
                                             <div className="col-lg-12">
                                                 <div className="d-grid">
-                                                    <button type="submit" className="btn btn-primary">Book An Appointment</button>
+                                                    {
+                                                        loading ? (
+                                                            <button className="btn btn-primary" style={{ alignItems: 'center' }} disabled>
+                                                                <div className="loader"></div>
+                                                            </button>
+                                                        ) : (
+                                                            <button type="submit" className="btn btn-primary">Book An Appointment</button>
+                                                        )
+                                                    }
                                                 </div>
                                             </div>
                                         </div>

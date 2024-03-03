@@ -18,7 +18,7 @@ export default function Login(){
             <div className="container">
                 <div className="row justify-content-center">
                     <div className="col-lg-5 col-md-8">
-                        <Image src='/images/logo-dark.png' width={115} height={22} className="mx-auto d-block" alt=""/>
+                        <Image src='/images/WS-Logo-Main.png' width={115} height={22} className="mx-auto d-block" alt=""/>
                         <div className="card login-page shadow mt-4 rounded border-0">
                             <div className="card-body">
                                 <h4 className="text-center">Sign In</h4>  
@@ -38,7 +38,7 @@ export default function Login(){
                                             </div>
                                         </div>
 
-                                        <div className="col-lg-12">
+                                        {/* <div className="col-lg-12">
                                             <div className="d-flex justify-content-between">
                                                 <div className="mb-3">
                                                     <div className="form-check">
@@ -48,14 +48,14 @@ export default function Login(){
                                                 </div>
                                                 <Link href="/forgot-password" className="text-dark h6 mb-0">Forgot password ?</Link>
                                             </div>
-                                        </div>
+                                        </div> */}
                                         <div className="col-lg-12 mb-0">
                                             <div className="d-grid">
                                                 <button className="btn btn-primary">Sign in</button>
                                             </div>
                                         </div>
 
-                                        <div className="col-lg-12 mt-3 text-center">
+                                        {/* <div className="col-lg-12 mt-3 text-center">
                                             <h6 className="text-muted">Or</h6>
                                         </div>
                                         
@@ -73,7 +73,7 @@ export default function Login(){
 
                                         <div className="col-12 text-center">
                                             <p className="mb-0 mt-3"><small className="text-dark me-2">Dont have an account ?</small> <Link href="/signup" className="text-dark fw-bold">Sign Up</Link></p>
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </form>
                             </div>

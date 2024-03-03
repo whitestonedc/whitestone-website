@@ -439,7 +439,7 @@ export const appointmentData = [
     },
     {
         id: 2,
-        clientImage: '/images/client/02.jpg',
+        clientImage: '/images/client/02.png',
         clientName: 'Wendy Filson',
         age: '28',
         gender: 'Female',
@@ -465,7 +465,7 @@ export const appointmentData = [
     },
     {
         id: 4,
-        clientImage: '/images/client/04.jpg',
+        clientImage: '/images/client/04.png',
         clientName: 'Ronald Curtis',
         age: '25',
         gender: 'Male',
@@ -567,7 +567,7 @@ export const invoiceData = [
     },
     {
         id: '#d02',
-        image: '/images/client/02.jpg',
+        image: '/images/client/02.png',
         name: 'Wendy Filson',
         phone: '(+12)85-4521-7568',
         amount: '$482',
@@ -585,7 +585,7 @@ export const invoiceData = [
     },
     {
         id: '#d04',
-        image: '/images/client/04.jpg',
+        image: '/images/client/04.png',
         name: 'Ronald Curtis',
         phone: '(+12)85-4521-7568',
         amount: '$154',
@@ -758,7 +758,7 @@ export const patientsData2 = [
     },
     {
         id: '#d0002',
-        image: '/images/client/02.jpg',
+        image: '/images/client/02.png',
         name: 'Wendy Filson',
         gender: 'Female',
         Age: '25Year',
@@ -776,7 +776,7 @@ export const patientsData2 = [
     },
     {
         id: '#d0004',
-        image: '/images/client/04.jpg',
+        image: '/images/client/04.png',
         name: 'Ronald Curtis',
         gender: 'Male',
         Age: '25Year',
@@ -857,7 +857,7 @@ export const chatData = [
         active: false
     },
     {
-        image: '/images/client/02.jpg',
+        image: '/images/client/02.png',
         name: 'Faye',
         time: '30 Min',
         message: 'Heyy',
@@ -873,7 +873,7 @@ export const chatData = [
         active: false
     },
     {
-        image: '/images/client/04.jpg',
+        image: '/images/client/04.png',
         name: 'Melissa',
         time: '3 Hours',
         message: 'Good Afternoon',
@@ -1292,23 +1292,48 @@ export const faqAbout = [
 export const acccordianData = [
     {
         id: 1,
-        title: 'Choose a Category to Quickly Find:',
-        desc: 'Discover Your Perfect Fit! Explore Categories to Find Exactly What You Need in Just a Few Clicks.'
+        title: 'How often should I visit the dentist for a check-up?',
+        desc: 'Dentists and oral health experts universally advise scheduling professional cleanings biannually, reinforcing a standard interval of six months for optimal oral hygiene maintenance worldwide.'
     },
     {
         id: 2,
-        title: 'Get Started',
-        desc: 'Ready, Set, Go! Begin Your Journey Today and Unlock Endless Possibilities with Just a Click of a Button.'
+        title: 'Do you accept dental insurance? What are the payment options available?',
+        desc: 'At this time, we do not currently accept dental insurance; however, we are actively pursuing options to accommodate this in the near future. Currently, our accepted modes of payment include cash, MoMo, and POS.'
     },
     {
         id: 3,
-        title: 'Pricing Plan',
-        desc: 'Unlock Your Options: Explore Our Flexible Pricing Plans Tailored to Suit Your Needs and Budget Perfectly.'
+        title: 'What should I do in case of a dental emergency?',
+        desc: 'Dental emergencies often arise from trauma, sudden onset of pain due to decayed teeth, or enamel fracture during chewing. Seeking prompt professional dental care is crucial. For bleeding, applying clean gauze to the area can help reduce blood flow. Over-the-counter pain medication can provide temporary relief until a dental appointment is arranged.'
     },
     {
         id: 4,
-        title: 'Dental Questions',
-        desc: 'Answers at Your Fingertips: Get Expert Solutions to Your Dental Queries and Enjoy Peace of Mind Today.'
+        title: 'Are your dentists experienced and qualified?',
+        desc: 'Teeth whitening enhances the visual appeal of the anterior teeth, resulting in a brighter smile that can significantly boost your confidence in social settings.'
+    },
+    {
+        id: 5,
+        title: 'What are the benefits of teeth whitening?',
+        desc: 'Teeth whitening enhances the visual appeal of the anterior teeth, resulting in a brighter smile that can significantly boost your confidence in social settings.'
+    },
+    {
+        id: 6,
+        title: 'Can you help with dental issues like crooked or misaligned teeth?',
+        desc: 'Under the specialized care of our orthodontist, we adeptly align and correct misaligned or crooked teeth utilizing orthodontic braces, including the highly effective Invisalign system.'
+    },
+    {
+        id: 7,
+        title: 'What is the process for getting dental implants?',
+        desc: 'To undergo a dental implant procedure, an initial specialist consultation is required, followed by scheduling for the commencement of the treatment. The subsequent appointments will be tailored and coordinated by your designated specialist.'
+    },
+    {
+        id: 8,
+        title: 'How can I schedule an appointment at your clinic?',
+        desc: 'Teeth whitening enhances the visual appeal of the anterior teeth, resulting in a brighter smile that can significantly boost your confidence in social settings.'
+    },
+    {
+        id: 9,
+        title: 'Can you help with cosmetic dental concerns like chipped or stained teeth?',
+        desc: 'Certainly, we possess the necessary resources and expertise to address your needs. Our premium restorative materials effectively repair chipped teeth, while our advanced tooth whitening equipment ensures a rejuvenated, bright smile following meticulous cleaning.'
     },
 ]
 export const commentData = [
@@ -1319,19 +1344,19 @@ export const commentData = [
         desc: '" There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour "'
     },
     {
-        image: '/images/client/02.jpg',
+        image: '/images/client/02.png',
         name: 'Tammy Camacho',
         date: '5th May 2023 at 10:00am',
         desc: '" There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour "'
     },
     {
-        image: '/images/client/03.jpg',
+        image: '/images/client/03.png',
         name: 'Tammy Camacho',
         date: '19th June 2023 at 09:00am',
         desc: '" There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour "'
     },
     {
-        image: '/images/client/04.jpg',
+        image: '/images/client/04.png',
         name: 'Lorenzo Peterson',
         date: '20th June 2023 at 02:00pm',
         desc: '" There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour "'
