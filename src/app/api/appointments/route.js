@@ -6,7 +6,7 @@ export const GET = async (req) => {
     try {
         await connect();
 
-        const appointments = await Appointment.find();
+        const appointments = await Appointment.find().sort({ createdAt: -1 });
 
         return new NextResponse(JSON.stringify(appointments), { status: 200 });
     } catch (error) {
